@@ -31,37 +31,54 @@ body {
 h1, h3,
 .footer {
     font-family: $display-font;
+    font-weight: 400;
 }
 
 // FONT-WEIGHT
 h4, h5,
+.info,
 form {
     font-weight: 700;
 }
 
-nav, button {
+input,
+textarea {
+    font-weight: 500;
+}
+
+nav, .button {
     font-weight: 600;
+}
+
+// TEXT-ALIGN
+h3, .symbol {
+    text-align: center;
 }
 
 // TEXT-TRANSFORM
 h1, h3, 
-button,
+.button,
 .footer {
     text-transform: lowercase;
 }
 
 h4, h5,
-form {
+.info,
+form,
+button[type="submit"] {
     text-transform: uppercase;
 }
 
 // LETTER-SPACING
-h2, h4, h5 {
+h2, h4, h5,
+.info {
     letter-spacing: -0.03em;
 }
 
 // LINE-HEIGHT
-h4, h5, p {
+h4, h5,
+.info,
+p {
     line-height: 150%;
 }
 
@@ -77,6 +94,15 @@ h2 {
 
 h3 {
     font-size: 5.5rem; // 110px
+}
+
+h4 {
+    font-size: 2.4rem; // 48px
+}
+
+h5,
+.info {
+    font-size: 1.6rem; // 32px
 }
 
 nav {

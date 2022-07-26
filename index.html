@@ -18,7 +18,7 @@
     <script src="https://kit.fontawesome.com/ba68b7fb9a.js" crossorigin="anonymous"></script>
 
 </head>
-<body>
+<body class="theme--main">
     <!-- SKIP LINK -->
     <a href="#about" class="skip-link">Skip to main content</a>
 
@@ -39,9 +39,9 @@
     </nav>
 
     <header class="header">
-        <div class="wrapper">
-            <!-- HEADER CONTENT -->
-            <div class="header__main-content">
+        <!-- HEADER CONTENT -->
+        <div class="header__main-content">
+            <div class="wrapper">
                 <div class="header__headings">
                     <h1>Frances McKenzie</h1>
                     <h2>Frontend Developer</h2>
@@ -54,14 +54,18 @@
                     <a href="#projects">Project</a>
                     <a href="#contact">Contact</a>
                 </nav>
-            </div> <!-- END header__main-content -->
+            </div> <!-- END wrapper-->
+        </div> <!-- END header__main-content -->
 
-            <!-- HEADER IMAGE -->
-            <div class="header__image">
+        <!-- HEADER IMAGE -->
+        <div class="header__image">
+            <div class="wrapper">
                 <!-- THEME SLIDER -->
                 <div class="header__theme-slider">
 
-                    <input type="range" value="1" max="2" />
+                    <!-- TO DO: ADD LABEL W .SR-ONLY -->
+                    <label for="theme-slider"></label>
+                    <input type="range" name="theme-slider" id="theme-slider" value="1" max="2" />
 
                     <div class="header__theme-icons">
                         <i class="fa-solid fa-sun"></i>
@@ -70,72 +74,197 @@
                     </div> <!-- END header__theme-icons -->
 
                 </div> <!-- END header__theme-slider -->
-            </div> <!-- END header__image -->
-        </div> <!-- END wrapper-->
+            </div> <!-- END wrapper-->
+        </div> <!-- END header__image -->
     </header>
 
     <main>
         <!-- ABOUT SECTION -->
         <section class="about section" id="about">
-            <h3>About Me</h3>
+            <div class="wrapper">
+                <h3>About Me</h3>
 
-            <!-- CURRENT / FORMER TITLES-->
-            <div class="about__titles">
-                <h4><span>Full-time</span> Frontend Web Developer</h4>
-                <h5><span>Former</span> Office Administrator</h5>
-            </div> <!-- END about__titles -->
+                <!-- CURRENT / FORMER TITLES-->
+                <div class="about__titles">
+                    <h4><span>Full-time</span> Frontend Web Developer</h4>
+                    <h5><span>Former</span> Office Administrator</h5>
+                </div> <!-- END about__titles -->
 
-            <!-- HEADSHOT DIV -->
-            <div class="about__img"></div>
-            
-            <!-- BIO -->
-            <div class="about__bio">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id sem at arcu viverra pellentesque. Morbi imperdiet tellus non congue finibus. In hac habitasse platea dictumst. Proin viverra vitae diam quis blandit. Praesent sagittis nulla vel neque imperdiet pretium. Aliquam pulvinar ipsum lacus, vel venenatis massa fringilla sed.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id sem at arcu viverra pellentesque. Morbi imperdiet tellus non congue finibus. </p>
-            </div> <!-- END about__bio -->
+                <!-- HEADSHOT DIV -->
+                <div class="about__img"></div>
+                
+                <!-- BIO -->
+                <div class="about__bio">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id sem at arcu viverra pellentesque. Morbi imperdiet tellus non congue finibus. In hac habitasse platea dictumst. Proin viverra vitae diam quis blandit. Praesent sagittis nulla vel neque imperdiet pretium. Aliquam pulvinar ipsum lacus, vel venenatis massa fringilla sed.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id sem at arcu viverra pellentesque. Morbi imperdiet tellus non congue finibus. </p>
+                </div> <!-- END about__bio -->
 
-            <!-- OTHER INFO -->
-            <div class="about__info-container">
+                <!-- OTHER INFO -->
+                <div class="about__info-container">
 
-                <div class="about__info">
-                    <h5>Pronouns</h5>
-                    <p>They / She</p>
-                </div> <!-- END about__info -->
+                    <div class="about__info">
+                        <h5>Pronouns</h5>
+                        <p class="info">They / She</p>
+                    </div> <!-- END about__info -->
 
-                <div class="about__info">
-                    <h5>City</h5>
-                    <p>Edmonton, AB</p>
-                </div> <!-- END about__info -->
+                    <div class="about__info">
+                        <h5>City</h5>
+                        <p class="info">Edmonton, AB</p>
+                    </div> <!-- END about__info -->
 
-                <div class="about__info">
-                    <h5>Hobbies</h5>
-                    <p>Rollerskating & Music</p>
-                </div> <!-- END about__info -->
+                    <div class="about__info">
+                        <h5>Hobbies</h5>
+                        <p class="info">Rollerskating & Music</p>
+                    </div> <!-- END about__info -->
 
-                <div class="about__info">
-                    <h5>Another One</h5>
-                    <p>Something Here</p>
-                </div> <!-- END about__info -->
+                    <div class="about__info">
+                        <h5>Another One</h5>
+                        <p class="info">Something Here</p>
+                    </div> <!-- END about__info -->
 
-            </div> <!-- END about__info-container -->
-            <p class="symbol">o</p>
-
+                </div> <!-- END about__info-container -->
+                <p class="symbol">o</p>
+            </div> <!-- END wrapper -->
         </section>
+        <!-- SKILLS SECTION -->
         <section class="skills section" id="skills">
-            <h3>Skills</h3>
-        </section>
-        <section class="projects section" id="projects">
-            <h3>Projects</h3>
+            <div class="wrapper">
+                <h3>Skills</h3>
+                <ul class="skills__skill-container">
+                    <li>
+                        <i class="fa-brands"></i>
+                        <p>HTML5</p>
+                    </li>
 
-            <p class="symbol">s</p>
+                    <li>
+                        <i class="fa-brands"></i>
+                        <p>CSS3</p>
+                    </li>
+
+                    <li>
+                        <i class="fa-brands"></i>
+                        <p>Sass</p>
+                    </li>
+
+                    <li>
+                        <i class="fa-brands"></i>
+                        <p>JavaScript</p>
+                    </li>
+
+                    <li>
+                        <i class="fa-brands"></i>
+                        <p>Git</p>
+                    </li>
+
+                    <li>
+                        <i class="fa-brands"></i>
+                        <p>GitHub</p>
+                    </li>
+
+                    <li>
+                        <i class="fa-brands"></i>
+                        <p>React</p>
+                    </li>
+
+                    <li>
+                        <i class="fa-brands"></i>
+                        <p>Firebase</p>
+                    </li>
+                </ul>
+            </div> <!-- END wrapper -->
         </section>
+
+        <!-- PROJECT SECTION -->
+        <section class="projects section" id="projects">
+            <div class="wrapper">
+                <h3>Projects</h3>
+
+                <!-- PROJECT GALLERY -->
+                <ul>
+                    <li>
+                        <div class="projects__img-container"></div>
+                        <div class="projects__text-container">
+                            <h5>Project Title</h5>
+                            <p>[HTML, CSS, JavaScript, React]</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit rem harum expedita totam, non in necessitatibus. Delectus doloremque officia rerum quis aspernatur. Magnam maiores deleniti consequuntur perferendis culpa corrupti incidunt?</p>
+                            <div class="projects__btn-container">
+                                <a href="" class="button">View Live</a>
+                                <a href="" class="button">View Repo</a>
+                            </div> <!-- END projects__btn-container -->
+                        </div> <!-- END projects__text-container -->
+                    </li>
+
+                    <li>
+                        <div class="projects__img-container"></div>
+                        <div class="projects__text-container">
+                            <h5>Project Title</h5>
+                            <p>[HTML, CSS, JavaScript, React]</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit rem harum expedita totam, non in necessitatibus. Delectus doloremque officia rerum quis aspernatur. Magnam maiores deleniti consequuntur perferendis culpa corrupti incidunt?</p>
+                            <div class="projects__btn-container">
+                                <a href="" class="button">View Live</a>
+                                <a href="" class="button">View Repo</a>
+                            </div> <!-- END projects__btn-container -->
+                        </div> <!-- END projects__text-container -->
+                    </li>
+
+                    <li>
+                        <div class="projects__img-container"></div>
+                        <div class="projects__text-container">
+                            <h5>Project Title</h5>
+                            <p>[HTML, CSS, JavaScript, React]</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit rem harum expedita totam, non in necessitatibus. Delectus doloremque officia rerum quis aspernatur. Magnam maiores deleniti consequuntur perferendis culpa corrupti incidunt?</p>
+                            <div class="projects__btn-container">
+                                <a href="" class="button">View Live</a>
+                                <a href="" class="button">View Repo</a>
+                            </div> <!-- END projects__btn-container -->
+                        </div> <!-- END projects__text-container -->
+                    </li>
+
+                    <li>
+                        <div class="projects__img-container"></div>
+                        <div class="projects__text-container">
+                            <h5>Project Title</h5>
+                            <p>[HTML, CSS, JavaScript, React]</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit rem harum expedita totam, non in necessitatibus. Delectus doloremque officia rerum quis aspernatur. Magnam maiores deleniti consequuntur perferendis culpa corrupti incidunt?</p>
+                            <div class="projects__btn-container">
+                                <a href="" class="button">View Live</a>
+                                <a href="" class="button">View Repo</a>
+                            </div> <!-- END projects__btn-container -->
+                        </div> <!-- END projects__text-container --> 
+                    </li>
+                </ul>
+
+                <p class="symbol">s</p>
+            </div> <!-- END wrapper -->
+        </section>
+
+        <!-- CONTACT SECTION -->
         <section class="contact section" id="contact">
-            <h3>Get In Touch</h3>
+            <div class="wrapper">
+                <h3>Get In Touch</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, praesentium quidem. Incidunt esse nulla magnam. Corrupti nesciunt adipisci veniam molestiae harum libero reprehenderit perferendis, blanditiis, vero itaque non, necessitatibus quisquam!</p>
+                
+                <!-- CONTACT FORM -->
+                <form class="contact__form">
+                    <label for="name">name</label>
+                    <input type="text" name="name" id="name" />
+
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="email" />
+
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div> <!-- END wrapper -->
         </section>
     </main>
 
     <footer class="footer">
-        <p>Designed & built in 2022 by Frances McKenzie</p>
+        <div class="wrapper">
+            <p>Designed & built in 2022 by Frances McKenzie</p>
+        </div> <!-- END wrapper -->
     </footer>
 </body>
 </html>

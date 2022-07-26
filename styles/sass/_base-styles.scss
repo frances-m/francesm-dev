@@ -1,3 +1,31 @@
+.wrapper {
+    max-width: 1340px;
+    width: 95%;
+    margin: 0 auto;
+}
+
 .skip-link {
     display: none;
+}
+
+.side-nav {
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    padding: 10px;
+    
+    background-color: black;
+    color: white;
+}
+
+.header,
+.footer,
+.section {
+    width: 100vw;
 }

@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="./styles/sass/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/ba68b7fb9a.js" crossorigin="anonymous"></script>
@@ -24,16 +24,16 @@
 
     <!-- SIDE NAV -->
     <nav class="side-nav side-nav--desktop">
-        <a href="https://github.com/frances-m" aria-label="Frances McKenzie's GitHub">
+        <a href="https://github.com/frances-m" target="_blank" aria-label="Frances McKenzie's GitHub">
             <i class="fa-brands fa-github"></i>
         </a>
-        <a href="https://linkedin.com/in/fr-ncesm/" aria-label="Frances McKenzie's LinkedIn">
+        <a href="https://linkedin.com/in/fr-ncesm/" target="_blank" aria-label="Frances McKenzie's LinkedIn">
             <i class="fa-brands fa-linkedin"></i>
         </a>
-        <a href="https://twitter.com/fr_ncesm" aria-label="Frances McKenzie's Twitter">
+        <a href="https://twitter.com/fr_ncesm" target="_blank" aria-label="Frances McKenzie's Twitter">
             <i class="fa-brands fa-twitter"></i>
         </a>
-        <a href="mailto:francesm@gmail.com" aria-label="Email Frances McKenzie">
+        <a href="mailto:francesm@gmail.com" target="_blank" aria-label="Email Frances McKenzie">
             <i class="fa-solid fa-envelope"></i>
         </a>
     </nav>
@@ -48,7 +48,7 @@
                 </div> <!-- END header__headings -->
 
                 <!-- MAIN NAV -->
-                <nav>
+                <nav class="header__nav">
                     <a href="#">Home</a>
                     <a href="#about">About</a>
                     <a href="#projects">Project</a>
@@ -62,15 +62,16 @@
             <div class="wrapper">
                 <!-- THEME SLIDER -->
                 <div class="header__theme-slider">
-
-                    <!-- TO DO: ADD LABEL W .SR-ONLY -->
-                    <label for="theme-slider"></label>
-                    <input type="range" name="theme-slider" id="theme-slider" value="1" max="2" />
+                    <div class="header__slider-container">
+                        <!-- TO DO: ADD LABEL W .SR-ONLY -->
+                        <label class="sr-only" for="theme-slider">alternate themes slider</label>
+                        <input type="range" name="theme-slider" id="theme-slider" value="1" max="2" />
+                    </div> <!-- END header__slider-container -->
 
                     <div class="header__theme-icons">
-                        <i class="fa-solid fa-sun"></i>
-                        <i class="fa-solid fa-ghost"></i>
-                        <i class="fa-solid fa-moon"></i>
+                        <div class="header__icon-container header__icon-container--dark"></div>
+                        <div class="header__icon-container header__icon-container--main"></div>
+                        <div class="header__icon-container header__icon-container--light"></div>
                     </div> <!-- END header__theme-icons -->
 
                 </div> <!-- END header__theme-slider -->

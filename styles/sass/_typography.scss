@@ -2,15 +2,15 @@
 // Blocus
 @font-face {
     font-family: 'Blocus';
-    src: url('../../assets/fonts/blocus/blocuswebfont.woff') format('woff'),
-        url('../../assets/fonts/blocus/blocuswebfont.ttf') format('ttf');
+    src: url('../assets/fonts/blocus/blocuswebfont.woff') format('woff'),
+        url('../assets/fonts/blocus/blocuswebfont.ttf') format('ttf');
     } 
 
 // Trickster
 @font-face {
     font-family: 'Trickster';
-    src: url('../../assets/fonts/trickster/Trickster-Regular.woff2') format('woff2'),
-        url('../../assets/fonts/trickster/Trickster-Regular.woff') format('woff');
+    src: url('../assets/fonts/trickster/Trickster-Regular.woff2') format('woff2'),
+        url('../assets/fonts/trickster/Trickster-Regular.woff') format('woff');
     }
 
 @font-feature-values 'Trickster' {
@@ -85,6 +85,7 @@ p {
 // ELEMENT SPECIFIC
 h1 {
     font-size: 6.4rem; //128px
+    line-height: .9;
 }
 
 h2 {

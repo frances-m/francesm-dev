@@ -1,0 +1,89 @@
+// FONT IMPORTS
+// Blocus
+@font-face {
+    font-family: 'Blocus';
+    src: url('../../assets/fonts/blocus/blocuswebfont.woff'),
+        url('../../assets/fonts/blocus/blocuswebfont.eot'),
+        url('../../assets/fonts/blocus/blocuswebfont.ttf');
+    } 
+
+// Trickster
+@font-face {
+    font-family: 'Trickster';
+    src: url('../../assets/fonts/trickster/Trickster-Regular.woff2'),
+        url('../../assets/fonts/trickster/Trickster-Regular.woff')
+        url('../../assets/fonts/trickster/Trickster-Regular.eot');
+    }
+
+html {
+    font-size: 125%; // 20px
+}
+
+body {
+    font-family: $body-font;
+    font-size: 1.2rem; // 24px
+}
+
+h1, h3 {
+    font-family: $display-font;
+}
+
+// FONT-WEIGHT
+h4, h5,
+form {
+    font-weight: 700;
+}
+
+nav, button {
+    font-weight: 600;
+}
+
+// TEXT-TRANSFORM
+h1, h3, 
+button {
+    text-transform: lowercase;
+}
+
+h4, h5,
+form {
+    text-transform: uppercase;
+}
+
+// LETTER-SPACING
+h2, h4, h5 {
+    letter-spacing: -3%;
+}
+
+// LINE-HEIGHT
+h4, h5, p {
+    line-height: 150%;
+}
+
+// ELEMENT SPECIFIC
+h1 {
+    font-size: 6.4rem; //128px
+}
+
+h2 {
+    font-size: 1.8rem; // 36px
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 5.5rem; // 110px
+}
+
+nav {
+    font-size: 1rem; // 20px
+    letter-spacing: 6%;
+}
+
+p {
+    letter-spacing: -1%;
+}
+
+.symbol {
+    font-family: $symbol-font;
+    font-size: 6.4rem; // 128px
+}
+

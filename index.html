@@ -39,32 +39,44 @@
     </nav>
 
     <header class="header">
-        <!-- HEADER CONTENT -->
-        <div class="header__main-content">
-            <div>
-                <h1>Frances McKenzie</h1>
-                <h2>Frontend Developer</h2>
-            </div>
+        <div class="wrapper">
+            <!-- HEADER CONTENT -->
+            <div class="header__main-content">
+                <div class="header__headings">
+                    <h1>Frances McKenzie</h1>
+                    <h2>Frontend Developer</h2>
+                </div> <!-- END header__headings -->
 
-            <!-- MAIN NAV -->
-            <nav>
-                <a href="#">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Project</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
+                <!-- MAIN NAV -->
+                <nav>
+                    <a href="#">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Project</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div> <!-- END header__main-content -->
 
-        <!-- HEADER IMAGE -->
-        <div class="header__image">
-            <!-- THEME SLIDER -->
-            <input type="range" max="3" />
-        </div>
+            <!-- HEADER IMAGE -->
+            <div class="header__image">
+                <!-- THEME SLIDER -->
+                <div class="header__theme-slider">
+
+                    <input type="range" value="1" max="2" />
+
+                    <div class="header__theme-icons">
+                        <i class="fa-solid fa-sun"></i>
+                        <i class="fa-solid fa-ghost"></i>
+                        <i class="fa-solid fa-moon"></i>
+                    </div> <!-- END header__theme-icons -->
+
+                </div> <!-- END header__theme-slider -->
+            </div> <!-- END header__image -->
+        </div> <!-- END wrapper-->
     </header>
 
     <main>
         <!-- ABOUT SECTION -->
-        <section class="about" id="about">
+        <section class="about section" id="about">
             <h3>About Me</h3>
 
             <!-- CURRENT / FORMER TITLES-->
@@ -109,15 +121,15 @@
             <p class="symbol">o</p>
 
         </section>
-        <section class="skills" id="skills">
+        <section class="skills section" id="skills">
             <h3>Skills</h3>
         </section>
-        <section class="projects" id="projects">
+        <section class="projects section" id="projects">
             <h3>Projects</h3>
 
             <p class="symbol">s</p>
         </section>
-        <section class="contact" id="contact">
+        <section class="contact section" id="contact">
             <h3>Get In Touch</h3>
         </section>
     </main>

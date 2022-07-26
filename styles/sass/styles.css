@@ -1,11 +1,21 @@
+.skip-link {
+  display: none;
+}
+
 @font-face {
   font-family: 'Blocus';
-  src: url("../../assets/fonts/blocus/blocuswebfont.woff"), url("../../assets/fonts/blocus/blocuswebfont.eot"), url("../../assets/fonts/blocus/blocuswebfont.ttf");
+  src: url("../../assets/fonts/blocus/blocuswebfont.woff") format("woff"), url("../../assets/fonts/blocus/blocuswebfont.ttf") format("ttf");
 }
 
 @font-face {
   font-family: 'Trickster';
-  src: url("../../assets/fonts/trickster/Trickster-Regular.woff2"), url("../../assets/fonts/trickster/Trickster-Regular.woff") url("../../assets/fonts/trickster/Trickster-Regular.eot");
+  src: url("../../assets/fonts/trickster/Trickster-Regular.woff2") format("woff2"), url("../../assets/fonts/trickster/Trickster-Regular.woff") format("woff");
+}
+
+@font-feature-values 'Trickster' {
+  @styleset {
+    symbols: 3;
+  }
 }
 
 html {
@@ -17,7 +27,8 @@ body {
   font-size: 1.2rem;
 }
 
-h1, h3 {
+h1, h3,
+.footer {
   font-family: "Blocus", sans-serif;
 }
 
@@ -31,7 +42,8 @@ nav, button {
 }
 
 h1, h3,
-button {
+button,
+.footer {
   text-transform: lowercase;
 }
 
@@ -73,5 +85,14 @@ p {
 .symbol {
   font-family: "Trickster";
   font-size: 6.4rem;
+  font-variant-alternates: styleset(symbols);
+}
+
+.footer {
+  font-size: 2rem;
+}
+
+body {
+  background-color: #EEE7FD;
 }
 /*# sourceMappingURL=styles.css.map */

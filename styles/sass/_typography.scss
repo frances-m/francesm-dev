@@ -116,6 +116,7 @@ nav {
     font-family: $symbol-font;
     font-size: 6.4rem; // 128px
     font-variant-alternates: styleset(symbols);
+    font-feature-settings: "ss03";
 }
 
 .footer {

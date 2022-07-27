@@ -17,6 +17,38 @@
         display: flex;
         justify-content: space-between;
         width: 375px;
+        height: 30px;
+
+        a {
+            position: relative;
+            height: 25px;
+
+            transition: .3s;
+            z-index: 1;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: -10%;
+                top: -25%;
+
+                height: 40px;
+                width: 120%;
+                background-color: white;
+
+                opacity: 0;
+                transition: .3s;
+                z-index: -1;
+            }
+
+            &:hover {
+                color: black;
+            }
+
+            &:hover::after {
+                opacity: 1;
+            }
+        }
     }
 
     &__image {
@@ -101,7 +133,7 @@
         transform: scale(.65);
         
         &--light {
-            left: 9px;
+            left: 10px;
             background-image: url('../assets/images/icons/sun.svg');
         }
 

@@ -1,11 +1,63 @@
 .about {
+
     h3 {
         margin-bottom: 100px;
     }
 
+    
+
     &__grid {
         display: grid;
         grid-template-columns: 615px 1fr;
-        grid-template-rows: auto auto;
+        grid-template-rows: 692px auto;
+        width: 85%;
+        max-width: 1160px;
+        margin: 0 auto;
+    }
+    
+    &__img {
+        justify-self: end;
+        height: 400px;
+        width: 400px;
+        border-radius: 50%;
+
+        background-color: #F8C2C2;
+    }
+
+    &__bio {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+
+    &__titles {
+        h4 {
+            margin-bottom: 10px;
+        }
+
+        h5 {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__info-container {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+
+        display: flex;
+        justify-content: space-between;
+        width: 66%;
+        min-width: 850px;
+        margin-bottom: 120px;
+    }
+
+    &__info {
+        width: 430px;
+        margin-top: 50px;
+
+        h5 {
+            margin-bottom: 10px;
+        }
     }
 }

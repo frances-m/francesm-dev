@@ -323,6 +323,29 @@ ul {
   padding: 0;
 }
 
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 215px;
+  height: 60px;
+  background-color: black;
+  color: white;
+  -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+.button:hover {
+  border: 4px solid black;
+  background-color: transparent;
+  color: black;
+}
+
 @font-face {
   font-family: "Blocus";
   src: url("../assets/fonts/blocus/blocuswebfont.woff") format("woff"), url("../assets/fonts/blocus/blocuswebfont.ttf") format("ttf");
@@ -357,8 +380,10 @@ form {
   font-weight: 700;
 }
 
+h2,
 input,
-textarea {
+textarea,
+.projects__built-with {
   font-weight: 500;
 }
 
@@ -378,6 +403,7 @@ h1, h3,
 
 h4, h5,
 .info,
+.projects__built-with,
 form,
 button[type=submit] {
   text-transform: uppercase;
@@ -401,7 +427,6 @@ h1 {
 
 h2 {
   font-size: 1.8rem;
-  font-weight: 500;
 }
 
 h3 {
@@ -696,6 +721,65 @@ p {
 }
 .skills__skill-container i {
   font-size: 5.4rem;
+}
+
+.projects h3 {
+  margin-bottom: 120px;
+}
+.projects__project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 83.334%;
+  max-width: 1140px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+.projects__project p {
+  line-height: 115%;
+}
+.projects__project--1 .projects__built-with {
+  width: 420px;
+}
+.projects__project--2 .projects__built-with {
+  width: 420px;
+}
+.projects__project--3 .projects__built-with {
+  width: 420px;
+}
+.projects__project--4 .projects__built-with {
+  width: 420px;
+}
+.projects__img-container {
+  -ms-flex-preferred-size: 448px;
+      flex-basis: 448px;
+  height: 334px;
+}
+.projects__text-container {
+  -ms-flex-preferred-size: 642px;
+      flex-basis: 642px;
+  margin-left: 50px;
+}
+.projects__built-with {
+  position: relative;
+  left: -12px;
+  margin-bottom: 28px;
+  padding: 8px 12px;
+  color: white;
+  background-color: black;
+}
+.projects__btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 475px;
+  margin: 25px 0 0 0;
 }
 
 .contact__form {

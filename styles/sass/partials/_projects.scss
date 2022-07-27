@@ -1,33 +1,64 @@
-.skills {
-
+.projects {
     h3 {
-        margin: 0 0 140px 0;
+        margin-bottom: 120px;
     }
 
-    &__skill-container {
+    &__project {
         display: flex;
-        flex-wrap: wrap;
-        row-gap: 80px;
-        column-gap: 100px;
         justify-content: space-between;
-        width: 847px;
-
+        width: 83.334%;
+        max-width: 1140px;
         margin: 0 auto;
+        margin-bottom: 80px;
 
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        
-        li {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            width: 135px;
-            height: 160px;
+        p {
+            line-height: 115%;
         }
 
-        i{
-            font-size: 5.4rem;
+        // Setting individual widths for each project's built with text
+        &--1 .projects__built-with {
+            width: 420px;
+        }
+    
+        &--2 .projects__built-with {
+            width: 420px;
+        }
+    
+        &--3 .projects__built-with {
+            width: 420px;
+        }
+    
+        &--4 .projects__built-with {
+            width: 420px;
         }
     }
+
+    &__img-container {
+        flex-basis: 448px;
+        height: 334px;
+    }
+    
+    &__text-container {
+        flex-basis: 642px;
+        margin-left: 50px;
+    }
+
+    &__built-with {
+            position: relative;
+            left: -12px;
+
+            margin-bottom: 28px;
+            padding: 8px 12px;
+
+            color: white;
+            background-color: black;
+    }
+
+    &__btn-container {
+        display: flex;
+        justify-content: space-between;
+        width: 475px;
+        margin: 25px 0 0 0;
+    }
+
 }

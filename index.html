@@ -19,7 +19,7 @@
 
 </head>
 <body class="theme--main">
-    
+
     <!-- SKIP LINK -->
     <a href="#about" class="skip-link">Skip to main content</a>
 
@@ -266,15 +266,15 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, praesentium quidem. Incidunt esse nulla magnam.</p>
                 
                 <!-- CONTACT FORM -->
-                <form class="contact__form" method="POST" name="contact" netlify>
+                <form class="contact__form" method="POST" action="/index.html" name="contact" netlify>
                     <label for="name">name</label>
-                    <input type="text" name="name" id="name" />
+                    <input type="text" name="name" id="name" required />
 
                     <label for="email">Email Address</label>
-                    <input type="email" name="email" id="email" />
+                    <input type="email" name="email" id="email" /required >
 
                     <label for="message">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" required></textarea>
 
                     <button type="submit">Submit</button>
                 </form>

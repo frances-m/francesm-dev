@@ -868,3 +868,58 @@ nav {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+.form-submit {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.form-submit .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+.form-submit .symbol {
+  position: absolute;
+  top: 20px;
+}
+.form-submit__text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 500px;
+}
+.form-submit h1 {
+  margin-bottom: 35px;
+}
+.form-submit p {
+  margin-bottom: 60px;
+  font-weight: 500;
+}
+.form-submit .button {
+  background-color: white;
+  color: black;
+}
+.form-submit .button:hover, .form-submit .button:focus {
+  background-color: transparent;
+  color: white;
+  border: 4px solid white;
+}

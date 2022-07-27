@@ -12,7 +12,7 @@
         margin-bottom: 80px;
 
         p {
-            line-height: 115%;
+            line-height: 120%;
         }
 
         // Setting individual widths for each project's built with text
@@ -61,4 +61,9 @@
         margin: 25px 0 0 0;
     }
 
+    .symbol {
+        padding-top: 50px;
+
+        font-size: 7.5rem;
+    }
 }

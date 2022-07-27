@@ -19,24 +19,9 @@
 
 </head>
 <body class="theme--main">
+    
     <!-- SKIP LINK -->
     <a href="#about" class="skip-link">Skip to main content</a>
-
-    <!-- SIDE NAV -->
-    <nav class="side-nav side-nav--desktop">
-        <a href="https://github.com/frances-m" target="_blank" aria-label="Frances McKenzie's GitHub">
-            <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://linkedin.com/in/fr-ncesm/" target="_blank" aria-label="Frances McKenzie's LinkedIn">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="https://twitter.com/fr_ncesm" target="_blank" aria-label="Frances McKenzie's Twitter">
-            <i class="fa-brands fa-twitter"></i>
-        </a>
-        <a href="mailto:francesm@gmail.com" target="_blank" aria-label="Email Frances McKenzie">
-            <i class="fa-solid fa-envelope"></i>
-        </a>
-    </nav>
 
     <header class="header">
         <!-- HEADER CONTENT -->
@@ -46,7 +31,7 @@
                     <h1>Frances McKenzie</h1>
                     <h2>Frontend Developer</h2>
                 </div> <!-- END header__headings -->
-
+                
                 <!-- MAIN NAV -->
                 <nav class="header__nav">
                     <a href="#">Home</a>
@@ -73,13 +58,29 @@
                         <div class="header__icon-container header__icon-container--main"></div>
                         <div class="header__icon-container header__icon-container--dark"></div>
                     </div> <!-- END header__theme-icons -->
-
+                    
                 </div> <!-- END header__theme-slider -->
             </div> <!-- END wrapper-->
         </div> <!-- END header__image -->
     </header>
-
+    
     <main>
+        <!-- SIDE NAV -->
+        <nav class="side-nav side-nav--desktop">
+            <a href="https://github.com/frances-m" target="_blank" aria-label="Frances McKenzie's GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/fr-ncesm/" target="_blank" aria-label="Frances McKenzie's LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com/fr_ncesm" target="_blank" aria-label="Frances McKenzie's Twitter">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="mailto:francesm@gmail.com" target="_blank" aria-label="Email Frances McKenzie">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </nav>
+
         <!-- ABOUT SECTION -->
         <section class="about section" id="about">
             <div class="wrapper">
@@ -262,10 +263,10 @@
         <section class="contact section" id="contact">
             <div class="wrapper">
                 <h3>Get In Touch</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, praesentium quidem. Incidunt esse nulla magnam. Corrupti nesciunt adipisci veniam molestiae harum libero reprehenderit perferendis, blanditiis, vero itaque non, necessitatibus quisquam!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, praesentium quidem. Incidunt esse nulla magnam.</p>
                 
                 <!-- CONTACT FORM -->
-                <form class="contact__form">
+                <form class="contact__form" method="POST" name="contact" netlify>
                     <label for="name">name</label>
                     <input type="text" name="name" id="name" />
 

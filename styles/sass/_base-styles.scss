@@ -5,7 +5,23 @@
 }
 
 .skip-link {
-    display: none;
+    position: absolute;
+    top: -50px;
+    z-index: 999;
+
+    width: 100%;
+
+    text-align: center;
+
+    background: white;
+    color: #000;
+
+    transition: .3s;
+
+    &:focus {
+        outline: none;
+        top: 0;
+    }
 }
 
 .side-nav {
@@ -23,6 +39,11 @@
     
     background-color: black;
     color: white;
+
+    a:focus {
+        outline: none;
+        color: #c48dff;
+    }
 }
 
 .header,
@@ -57,9 +78,58 @@ ul {
 
     transition: background-color .3s linear, color .3s linear;
 
-    &:hover {
+    &:hover,
+    &:focus {
+        outline: none;
         border: 4px solid black;
         background-color: transparent;
         color: black;
+    }
+}
+
+form {
+    input,
+    textarea,
+    button[type="submit"] {
+        border: none;
+        border-radius: 0;
+    }
+
+    input,
+    button[type="submit"] {
+        height: 60px;
+    }
+
+    input,
+    textarea {
+        margin-bottom: 40px;
+        padding: 0 15px;
+        font-weight: 600;
+
+        &:focus {
+            outline: 4px solid #c48dff;
+        }
+    }
+
+    textarea {
+        padding: 15px;
+    }
+
+    label {
+        margin-bottom: 15px;
+    }
+
+    button[type="submit"] {
+        border: 4px solid white;
+        background-color: transparent;
+        color: white;
+
+        transition: background-color .3s;
+
+        &:hover,
+        &:focus-visible {
+            background-color: white;
+            color: black;
+        }
     }
 }

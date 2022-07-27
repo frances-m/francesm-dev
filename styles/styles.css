@@ -279,7 +279,19 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .skip-link {
-  display: none;
+  position: absolute;
+  top: -50px;
+  z-index: 999;
+  width: 100%;
+  text-align: center;
+  background: white;
+  color: #000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.skip-link:focus {
+  outline: none;
+  top: 0;
 }
 
 .side-nav {
@@ -301,6 +313,10 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 1.75rem;
   background-color: black;
   color: white;
+}
+.side-nav a:focus {
+  outline: none;
+  color: #c48dff;
 }
 
 .header,
@@ -340,9 +356,48 @@ ul {
   -webkit-transition: background-color 0.3s linear, color 0.3s linear;
   transition: background-color 0.3s linear, color 0.3s linear;
 }
-.button:hover {
+.button:hover, .button:focus {
+  outline: none;
   border: 4px solid black;
   background-color: transparent;
+  color: black;
+}
+
+form input,
+form textarea,
+form button[type=submit] {
+  border: none;
+  border-radius: 0;
+}
+form input,
+form button[type=submit] {
+  height: 60px;
+}
+form input,
+form textarea {
+  margin-bottom: 40px;
+  padding: 0 15px;
+  font-weight: 600;
+}
+form input:focus,
+form textarea:focus {
+  outline: 4px solid #c48dff;
+}
+form textarea {
+  padding: 15px;
+}
+form label {
+  margin-bottom: 15px;
+}
+form button[type=submit] {
+  border: 4px solid white;
+  background-color: transparent;
+  color: white;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+form button[type=submit]:hover, form button[type=submit]:focus-visible {
+  background-color: white;
   color: black;
 }
 
@@ -365,7 +420,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 h1, h3,
@@ -415,8 +470,7 @@ h2, h4, h5,
 }
 
 h4, h5,
-.info,
-p {
+.info {
   line-height: 150%;
 }
 
@@ -445,10 +499,6 @@ h5,
 nav {
   font-size: 1rem;
   letter-spacing: 0.06em;
-}
-
-p {
-  letter-spacing: -0.01em;
 }
 
 .symbol {
@@ -523,10 +573,11 @@ p {
   transition: 0.3s;
   z-index: -1;
 }
-.header__nav a:hover {
+.header__nav a:hover, .header__nav a:focus {
+  outline: none;
   color: black;
 }
-.header__nav a:hover::after {
+.header__nav a:hover::after, .header__nav a:focus::after {
   opacity: 1;
 }
 .header__image {
@@ -568,6 +619,11 @@ p {
   background: transparent;
   outline: none;
   z-index: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.header__theme-slider input:focus-visible {
+  outline: 4px solid white;
 }
 .header__theme-slider input::-moz-range-thumb {
   width: 32px;
@@ -606,14 +662,14 @@ p {
           transform: scale(0.65);
 }
 .header__icon-container--light {
-  left: 10px;
+  left: 9px;
   background-image: url("../assets/images/icons/sun.svg");
 }
 .header__icon-container--main {
   background-image: url("../assets/images/icons/sun-moon.svg");
 }
 .header__icon-container--dark {
-  right: 9px;
+  right: 8px;
   background-image: url("../assets/images/icons/moon-cloud.svg");
 }
 
@@ -653,6 +709,9 @@ p {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 50px;
+  font-size: 1.2rem;
+  line-height: 150%;
+  letter-spacing: -0.01em;
 }
 .about__titles h4 {
   margin-bottom: 10px;
@@ -739,7 +798,7 @@ p {
   margin-bottom: 80px;
 }
 .projects__project p {
-  line-height: 115%;
+  line-height: 120%;
 }
 .projects__project--1 .projects__built-with {
   width: 420px;
@@ -781,7 +840,22 @@ p {
   width: 475px;
   margin: 25px 0 0 0;
 }
+.projects .symbol {
+  padding-top: 50px;
+  font-size: 7.5rem;
+}
 
+.contact .wrapper {
+  width: 60%;
+  max-width: 675px;
+}
+.contact h3 {
+  margin: 0 0 85px 0;
+}
+.contact p {
+  text-align: center;
+  margin: 0 0 85px 0;
+}
 .contact__form {
   display: -webkit-box;
   display: -ms-flexbox;

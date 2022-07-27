@@ -42,11 +42,14 @@
                 z-index: -1;
             }
 
-            &:hover {
+            &:hover,
+            &:focus {
+                outline: none;
                 color: black;
             }
 
-            &:hover::after {
+            &:hover::after,
+            &:focus::after {
                 opacity: 1;
             }
         }
@@ -92,6 +95,12 @@
             outline: none; 
             z-index: 1;
 
+            transition: .3s;
+            
+            &:focus-visible {
+                outline: 4px solid white;
+            }
+
             &::-moz-range-thumb {
                 width: 32px;
                 height: 32px;
@@ -99,6 +108,7 @@
                 border-radius: 50%;
                 background: white; 
                 cursor: pointer; 
+
             }
         }
     }
@@ -134,7 +144,7 @@
         transform: scale(.65);
         
         &--light {
-            left: 10px;
+            left: 9px;
             background-image: url('../assets/images/icons/sun.svg');
         }
 
@@ -143,7 +153,7 @@
         }
 
         &--dark {
-            right: 9px;
+            right: 8px;
             background-image: url('../assets/images/icons/moon-cloud.svg');
         }
     }

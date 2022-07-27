@@ -1,5 +1,19 @@
 .contact {
 
+    .wrapper {
+        width: 60%;
+        max-width: 675px;
+    }
+
+    h3 {
+        margin: 0 0 85px 0;
+    }
+
+    p {
+        text-align: center;
+        margin: 0 0 85px 0;
+    }
+
     &__form {
         display: flex;
         flex-direction: column;

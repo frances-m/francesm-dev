@@ -3,14 +3,20 @@
     display: flex;
     flex-direction: column;
 
+    .wrapper {
+        position: relative;
+        height: 100%;
+    }
+
     &__main-content {
+        height: 60vh;
         min-height: 300px;
         padding: 50px 0 0 0;
+    }
 
-        .wrapper {
-            display: flex;
-            justify-content: space-between;
-        }
+    &__top {
+        display: flex;
+        justify-content: space-between;
     }
 
     &__nav {
@@ -66,10 +72,12 @@
 
         .wrapper {
             position: relative;
-            
+
             height: 100%;
+
         }
     }
+
 
     &__theme-slider {
         position: absolute;
@@ -79,7 +87,7 @@
         justify-content: center;
         align-items: center;
         width: 120px;
-        height: 43px;
+        height: 46px;
 
         input {
             position: relative;
@@ -134,13 +142,14 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 100%;
+        width: 105%;
         height: 100%;
         border-radius: 25px;
 
         font-size: 1.4rem;
 
-        background-color: black;
+        border: 3.5px solid white;
+        border-spacing: 2px;
 
         z-index: 0;
 

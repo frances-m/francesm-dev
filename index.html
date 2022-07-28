@@ -27,24 +27,21 @@
         <!-- HEADER CONTENT -->
         <div class="header__main-content">
             <div class="wrapper">
-                <div class="header__headings">
-                    <h1>Frances McKenzie</h1>
-                    <h2>Frontend Developer</h2>
-                </div> <!-- END header__headings -->
+                <div class="header__top">
+                    <div class="header__headings">
+                        <h1>Frances McKenzie</h1>
+                        <h2>Frontend Developer</h2>
+                    </div> <!-- END header__headings -->
+                    
+                    <!-- MAIN NAV -->
+                    <nav class="header__nav">
+                        <a href="#">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#projects">Project</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
+                </div> <!-- END header__top -->
                 
-                <!-- MAIN NAV -->
-                <nav class="header__nav">
-                    <a href="#">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#projects">Project</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-            </div> <!-- END wrapper-->
-        </div> <!-- END header__main-content -->
-
-        <!-- HEADER IMAGE -->
-        <div class="header__image">
-            <div class="wrapper">
                 <!-- THEME SLIDER -->
                 <div class="header__theme-slider">
                     <div class="header__slider-container">
@@ -52,32 +49,35 @@
                         <label class="sr-only" for="theme-slider">alternate themes slider</label>
                         <input type="range" name="theme-slider" id="theme-slider" value="1" max="2" />
                     </div> <!-- END header__slider-container -->
-
+    
                     <div class="header__theme-icons">
                         <div class="header__icon-container header__icon-container--light"></div>
                         <div class="header__icon-container header__icon-container--main"></div>
                         <div class="header__icon-container header__icon-container--dark"></div>
                     </div> <!-- END header__theme-icons -->
-                    
                 </div> <!-- END header__theme-slider -->
             </div> <!-- END wrapper-->
+        </div> <!-- END header__main-content -->
+
+        <!-- HEADER IMAGE -->
+        <div class="header__image">
         </div> <!-- END header__image -->
     </header>
     
     <main>
         <!-- SIDE NAV -->
-        <nav class="side-nav side-nav--desktop">
+        <nav class="side-nav side-nav--desktop" aria-label="social links">
             <a href="https://github.com/frances-m" target="_blank" aria-label="Frances McKenzie's GitHub">
-                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-github fa-fw"></i>
             </a>
             <a href="https://linkedin.com/in/fr-ncesm/" target="_blank" aria-label="Frances McKenzie's LinkedIn">
-                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-linkedin fa-fw"></i>
             </a>
             <a href="https://twitter.com/fr_ncesm" target="_blank" aria-label="Frances McKenzie's Twitter">
-                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-twitter fa-fw"></i>
             </a>
             <a href="mailto:francesm@gmail.com" target="_blank" aria-label="Email Frances McKenzie">
-                <i class="fa-solid fa-envelope"></i>
+                <i class="fa-solid fa-envelope fa-fw"></i>
             </a>
         </nav>
 

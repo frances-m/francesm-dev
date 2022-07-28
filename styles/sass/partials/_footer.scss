@@ -1,6 +1,11 @@
 .footer {
-    text-align: center;
-
     color: white;
     background-color: $main-footer;
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
 }

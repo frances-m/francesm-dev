@@ -308,9 +308,9 @@ p, h1, h2, h3, h4, h5, h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 240px;
-  padding: 25px 20px;
-  font-size: 1.75rem;
+  height: 200px;
+  padding: 10px 8px;
+  font-size: 1.6rem;
   background-color: black;
   color: white;
 }
@@ -375,7 +375,6 @@ form button[type=submit] {
 }
 form input,
 form textarea {
-  margin-bottom: 40px;
   padding: 0 15px;
   font-weight: 600;
 }
@@ -397,6 +396,7 @@ form button[type=submit] {
   transition: background-color 0.3s;
 }
 form button[type=submit]:hover, form button[type=submit]:focus-visible {
+  outline: none;
   background-color: white;
   color: black;
 }
@@ -533,11 +533,16 @@ nav {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.header .wrapper {
+  position: relative;
+  height: 100%;
+}
 .header__main-content {
+  height: 60vh;
   min-height: 300px;
   padding: 50px 0 0 0;
 }
-.header__main-content .wrapper {
+.header__top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -606,7 +611,7 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   width: 120px;
-  height: 43px;
+  height: 46px;
 }
 .header__theme-slider input {
   position: relative;
@@ -658,11 +663,12 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 105%;
   height: 100%;
   border-radius: 25px;
   font-size: 1.4rem;
-  background-color: black;
+  border: 3.5px solid white;
+  border-spacing: 2px;
   z-index: 0;
 }
 .header__icon-container {
@@ -685,9 +691,20 @@ nav {
 }
 
 .footer {
-  text-align: center;
   color: white;
   background-color: #141414;
+}
+.footer .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
 }
 
 .about h3 {
@@ -878,6 +895,13 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.contact__form input,
+.contact__form textarea {
+  margin-bottom: 40px;
+}
+.contact__form textarea {
+  resize: vertical;
 }
 
 .form-submit {

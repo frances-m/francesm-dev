@@ -1,0 +1,30 @@
+.header__mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
+    display: none;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: visible;
+
+    background-color: $primary-neutral;
+    color: $secondary-neutral;
+
+    font-size: 2rem;
+    font-family: $display-font;
+    text-transform: lowercase;
+    font-weight: 400;
+
+    &-links {
+        display: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        gap: 30px;
+        height: 50vh;
+        margin: 0 auto;
+    }
+}

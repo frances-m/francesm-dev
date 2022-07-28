@@ -20,19 +20,19 @@
 
         // Setting individual widths for each project's built with text
         &--1 .projects__built-with {
-            width: 420px;
+            width: 360px;
         }
     
         &--2 .projects__built-with {
-            width: 420px;
+            width: 360px;
         }
     
         &--3 .projects__built-with {
-            width: 420px;
+            width: 360px;
         }
     
         &--4 .projects__built-with {
-            width: 420px;
+            width: 360px;
         }
     }
 
@@ -70,5 +70,29 @@
         font-size: 7.5rem;
 
         color: $primary-neutral--alt;
+    }
+}
+
+@media (max-width: 1290px) {
+    .projects {
+        &__project {
+            justify-content: center;
+            width: 90%;
+            margin-bottom: 120px;
+        }
+
+        &__text-container {
+            flex-basis: 420px;
+        }
+
+        &__btn-container {
+            justify-content: start;
+            gap: 20px;
+            width: auto;
+
+            .button {
+                width: 150px;
+            }
+        }
     }
 }

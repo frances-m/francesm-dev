@@ -162,3 +162,11 @@
         
     }
 }
+
+@media (max-width: 1100px) {
+    .header {
+        &__nav {
+            display: none;
+        }
+    }
+}

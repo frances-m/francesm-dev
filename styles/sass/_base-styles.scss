@@ -28,41 +28,9 @@ body {
     }
 }
 
-.side-nav {
-    position: fixed;
-    right: 2.5%;
-    bottom: 60px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 180px;
-    padding: 12px 8px;
-
-    font-size: 1.6rem;
-    
-    background-color: $primary-neutral;
-    color: $secondary-neutral;
-
-    a {
-        transition: .3s;
-    }
-
-    a:focus,
-    a:hover {
-        outline: none;
-        color: $accent;
-    }
-}
-
 .material-icons {
     font-size: 1.5rem;
     color: $secondary-neutral;
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 200,
-    'opsz' 48;
 }
 
 
@@ -119,6 +87,7 @@ ul {
 }
 
 button {
+    border: none;
     cursor: pointer;
 }
 

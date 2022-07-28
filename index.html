@@ -27,10 +27,27 @@
     <!-- SKIP LINK -->
     <a href="#about" class="skip-link">Skip to main content</a>
 
+    <!-- SIDE NAV (MOBILE) -->
+    <button class="side-nav side-nav--mobile" type="button" aria-label="open mobile nav">
+        <span class="material-icons icon--open">arrow_back</span>
+        <span class="material-icons icon--close">close</span>
+    </button>
+
+
     <header class="header">
+        <!-- MAIN NAV (MOBILE) -->
+        <nav class="header__mobile-nav">
+            <div class="header__mobile-nav-links">
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
         <!-- HEADER CONTENT -->
         <div class="header__main-content">
             <div class="wrapper">
+                <!-- MAIN NAV (MOBILE) -->
                 <div class="header__top">
                     <div class="header__headings">
                         <h1>Frances McKenzie</h1>
@@ -41,7 +58,7 @@
                     <nav class="header__nav">
                         <a href="#">Home</a>
                         <a href="#about">About</a>
-                        <a href="#projects">Project</a>
+                        <a href="#projects">Projects</a>
                         <a href="#contact">Contact</a>
                     </nav>
                 </div> <!-- END header__top -->
@@ -75,7 +92,7 @@
     </header>
     
     <main>
-        <!-- SIDE NAV -->
+        <!-- SIDE NAV (DESKTOP) -->
         <nav class="side-nav side-nav--desktop" aria-label="social links">
             <a href="https://github.com/frances-m" target="_blank" aria-label="Frances McKenzie's GitHub">
                 <i class="fa-brands fa-github fa-fw"></i>
@@ -97,18 +114,18 @@
                 <h3>About Me</h3>
 
                 <div class="about__grid">
-                    <div class="about__bio">
                         
-                        <!-- CURRENT / FORMER TITLES-->
-                        <div class="about__titles">
-                            <h4><span class="text-accent">Full-time</span> Frontend Web Developer</h4>
-                            <h5><span class="text-accent">Former</span> Office Administrator</h5>
-                        </div> <!-- END about__titles -->
+                    <!-- CURRENT / FORMER TITLES-->
+                    <div class="about__titles">
+                        <h4><span class="text-accent">Full-time</span> Frontend Web Developer</h4>
+                        <h5><span class="text-accent">Former</span> Office Administrator</h5>
+                    </div> <!-- END about__titles -->
 
-                        <!-- BIO -->
+                    <!-- BIO -->
+                    <div class="about__bio">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id sem at arcu viverra pellentesque. Morbi imperdiet tellus non congue finibus. In hac habitasse platea dictumst. Proin viverra vitae diam quis blandit. Praesent sagittis nulla vel neque imperdiet pretium. Aliquam pulvinar ipsum lacus, vel venenatis massa fringilla sed.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id sem at arcu viverra pellentesque. Morbi imperdiet tellus non congue finibus. </p>
-                    </div> <!-- END about__bio -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id sem at arcu viverra pellentesque. Morbi imperdiet tellus non congue finibus.</p>
+                    </div> <!-- END about__bio-->
 
                     <!-- HEADSHOT DIV -->
                     <div class="about__img"></div>

@@ -1,4 +1,6 @@
 .form-submit {
+    min-height: 100vh;
+
     background-color: black;
     color: white;
 
@@ -9,13 +11,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: 100vh;
+        min-height: 60vh;
     }
 
-    .symbol {
-        position: absolute;
-        top: 20px;
-    }
 
 
     &__text-container {

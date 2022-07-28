@@ -1,18 +1,48 @@
-// THEME PALLETTES
+// THEME PALETTES
+// global
+$accent: #C48DFF;
+
 // main theme
-$main-bg: #EEE7FD;
-$main-accent: #474747;
-$main-footer: #141414;
+.theme--main {
+    --primary-neutral: black;
+    --secondary-neutral: white;
+    --primary-neutral--alt: black;
+    --secondary-neutral--alt: white;
+    --bg: #EEE7FD;
+    --text-accent: #474747;
+    --footer: #141414;
+}
 
 // light theme
-$light-bg: #EEE7FD;
-$light-accent: #E3C8FF;
-$light-footer: #E2E2E2;
+.theme--light {
+    --primary-neutral: white;
+    --secondary-neutral: black;
+    --primary-neutral--alt: black;
+    --secondary-neutral--alt: white;
+    --bg: #EEE7FD;
+    --text-accent: #474747;
+    --footer: #E2E2E2;
+}
 
 // dark theme
-$dark-bg: #201F28;
-$dark-accent: #474747;
-$dark-footer: #141414;
+.theme--dark {
+    --primary-neutral: black;
+    --secondary-neutral: white;
+    --primary-neutral--alt: white;
+    --secondary-neutral--alt: black;
+    --bg: #201F28;
+    --text-accent: #E3C8FF;
+    --footer: #141414;
+}
+
+$primary-neutral: var(--primary-neutral);
+$secondary-neutral: var(--secondary-neutral);
+$primary-neutral--alt: var(--primary-neutral--alt);
+$secondary-neutral--alt: var(--secondary-neutral--alt);
+
+$bg: var(--bg);
+$text-accent: var(--text-accent);
+$footer: var(--footer);
 
 
 // FONTS

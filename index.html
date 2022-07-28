@@ -10,6 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./styles/styles.css">
@@ -50,11 +54,17 @@
                         <input type="range" name="theme-slider" id="theme-slider" value="1" max="2" />
                     </div> <!-- END header__slider-container -->
     
-                    <div class="header__theme-icons">
-                        <div class="header__icon-container header__icon-container--light"></div>
-                        <div class="header__icon-container header__icon-container--main"></div>
-                        <div class="header__icon-container header__icon-container--dark"></div>
-                    </div> <!-- END header__theme-icons -->
+                    <ul class="header__theme-icons">
+                        <li class="header__icon-container">
+                            <span class="material-icons">brightness_5</span>
+                        </li>
+                        <li class="header__icon-container">
+                            <span class="material-icons">brightness_4</span>
+                        </li>
+                        <li class="header__icon-container">
+                            <span class="material-icons">nights_stay</span>
+                        </li>
+                    </ul>
                 </div> <!-- END header__theme-slider -->
             </div> <!-- END wrapper-->
         </div> <!-- END header__main-content -->
@@ -91,8 +101,8 @@
                         
                         <!-- CURRENT / FORMER TITLES-->
                         <div class="about__titles">
-                            <h4><span>Full-time</span> Frontend Web Developer</h4>
-                            <h5><span>Former</span> Office Administrator</h5>
+                            <h4><span class="text-accent">Full-time</span> Frontend Web Developer</h4>
+                            <h5><span class="text-accent">Former</span> Office Administrator</h5>
                         </div> <!-- END about__titles -->
 
                         <!-- BIO -->
@@ -108,25 +118,25 @@
 
                         <div class="about__info-row">
                             <div class="about__info">
-                                <h5>Pronouns</h5>
+                                <h5 class="text-accent">Pronouns</h5>
                                 <p class="info">They / She</p>
                             </div> <!-- END about__info -->
 
                             <div class="about__info">
-                                <h5>City</h5>
+                                <h5 class="text-accent">City</h5>
                                 <p class="info">Edmonton, AB</p>
                             </div> <!-- END about__info -->
                         </div> <!-- END about__info-row -->
 
                         <div class="about__info-row">
                             <div class="about__info">
-                                <h5>Hobbies</h5>
+                                <h5 class="text-accent">Hobbies</h5>
                                 <p class="info">Rollerskating & Music</p>
                             </div> <!-- END about__info -->
 
                         
                             <div class="about__info">
-                                <h5>Another One</h5>
+                                <h5 class="text-accent">Another One</h5>
                                 <p class="info">Something Here</p>
                             </div> <!-- END about__info -->
                         </div> <!-- END about__info-row -->
@@ -178,7 +188,7 @@
                     </li>
 
                     <li>
-                        <svg width="81" height="109" viewBox="0 0 81 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="81" height="109" viewBox="0 0 81 109" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2.78682 71.3466L13.749 2.89432C13.9155 1.85123 14.747 1.02885 15.8136 0.852145C16.8803 0.675436 17.9433 1.18398 18.4534 2.11499L30.2395 23.5926L2.78682 71.3466ZM80.6291 87.958L70.1952 24.961C70.0376 24.0563 69.3758 23.3129 68.4797 23.0339C67.5836 22.755 66.6029 22.9871 65.9374 23.6356L0.126465 87.958L36.5413 107.883C38.828 109.129 41.6131 109.129 43.8998 107.883L80.6291 87.958ZM51.0381 32.9814L42.6042 17.315C42.1692 16.5083 41.312 16.0033 40.3778 16.0033C39.4436 16.0033 38.5863 16.5083 38.1514 17.315L1.12017 81.7479L51.0381 32.9814Z" fill="white"/>
                             </svg>
                         <p>Firebase</p>

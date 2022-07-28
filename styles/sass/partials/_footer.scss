@@ -1,11 +1,12 @@
 .footer {
-    color: white;
-    background-color: $main-footer;
+    font-size: 1.7rem;
+    color: $secondary-neutral;
+    background-color: $footer;
 
     .wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100px;
+        height: 65px;
     }
 }

@@ -29,5 +29,9 @@
         i{
             font-size: 5.4rem;
         }
+
+        svg path {
+            fill: $secondary-neutral;
+        }
     }
 }

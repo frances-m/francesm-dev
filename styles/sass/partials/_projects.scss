@@ -1,4 +1,7 @@
 .projects {
+
+    color: $primary-neutral--alt;
+
     h3 {
         margin-bottom: 120px;
     }
@@ -50,8 +53,8 @@
             margin-bottom: 28px;
             padding: 8px 12px;
 
-            color: white;
-            background-color: black;
+            color: $secondary-neutral--alt;
+            background-color: $primary-neutral--alt;
     }
 
     &__btn-container {
@@ -65,5 +68,7 @@
         padding-top: 50px;
 
         font-size: 7.5rem;
+
+        color: $primary-neutral--alt;
     }
 }

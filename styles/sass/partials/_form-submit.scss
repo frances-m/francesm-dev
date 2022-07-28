@@ -1,8 +1,8 @@
 .form-submit {
     min-height: 100vh;
 
-    background-color: black;
-    color: white;
+    background-color: $primary-neutral;
+    color: $secondary-neutral;
 
     text-align: center;
 
@@ -33,14 +33,14 @@
     }
 
     .button {
-        background-color: white;
-        color: black;
+        background-color: $secondary-neutral;
+        color: $primary-neutral;
 
         &:hover,
         &:focus {
             background-color: transparent;
-            color: white;
-            border: 4px solid white;
+            color: $secondary-neutral;
+            border: 4px solid $secondary-neutral;
         }
     }
 }

@@ -1,11 +1,11 @@
 // UTILITIES
-@import './utilities/setup';
 @import './utilities/variables';
+@import './utilities/placeholders';
+@import './utilities/setup';
 
 // GLOBAL STYLES
 @import './base-styles';
 @import './typography';
-@import './themes';
 
 // SITE SECTIONS
 // global

@@ -145,3 +145,9 @@ nav {
         font-size: clamp(.9rem, 0.557rem + 2.143vw , 1.2rem);
     }
 }
+
+@media (max-width: 500px) {
+    h3 {
+        font-size: 3.8rem; // 76px
+    }
+}

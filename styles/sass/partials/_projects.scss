@@ -98,7 +98,7 @@
 @media (max-width: 900px) {
     .projects {
         h3 {
-            margin-bottom: 120px;
+            margin-bottom: 80px;
         }
 
         h5 {
@@ -149,13 +149,17 @@
 
 @media (max-width: 425px) {
     .projects {
+        h3 {
+            margin-bottom: 60px;
+        }
+
         &__project {
 
             margin-bottom: 0;
 
             &--1 .projects__built-with,
-            &--2 .projects__built-with
-            &--3 .projects__built-with
+            &--2 .projects__built-with,
+            &--3 .projects__built-with,
             &--4 .projects__built-with {
                 width: 100%;
             }

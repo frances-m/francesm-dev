@@ -581,7 +581,12 @@ nav {
 }
 @media (max-width: 425px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.9rem;
+  }
+}
+@media (max-width: 350px) {
+  h1 {
+    font-size: 2.7rem;
   }
   h2 {
     font-size: 0.9rem;
@@ -751,8 +756,8 @@ nav {
 }
 @media (max-width: 600px) {
   .header__main-content {
-    height: 80vw;
-    min-height: unset;
+    height: 250px;
+    min-height: 250px;
   }
   .header__theme-slider {
     height: 40px;
@@ -1345,7 +1350,7 @@ nav {
 }
 @media (max-width: 900px) {
   .projects h3 {
-    margin-bottom: 120px;
+    margin-bottom: 80px;
   }
   .projects h5 {
     margin-bottom: 5px;
@@ -1389,10 +1394,13 @@ nav {
   }
 }
 @media (max-width: 425px) {
+  .projects h3 {
+    margin-bottom: 60px;
+  }
   .projects__project {
     margin-bottom: 0;
   }
-  .projects__project--1 .projects__built-with, .projects__project--2 .projects__built-with .projects__project--3 .projects__built-with .projects__project--4 .projects__built-with {
+  .projects__project--1 .projects__built-with, .projects__project--2 .projects__built-with, .projects__project--3 .projects__built-with, .projects__project--4 .projects__built-with {
     width: 100%;
   }
   .projects__text-container {

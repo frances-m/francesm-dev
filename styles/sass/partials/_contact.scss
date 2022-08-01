@@ -29,3 +29,30 @@
         }
     }
 }
+
+@media (max-width: 950px) {
+    .contact {
+        .wrapper {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .contact {
+        padding-bottom:100px;
+
+        .wrapper {
+            width: 85%;
+        }
+
+        input,
+        button[type="submit"] {
+            height: 50px;
+        }
+
+        p {
+            font-size: .9rem;
+        }
+    }
+}

@@ -1,16 +1,16 @@
 .skills {
 
     h3 {
-        margin: 0 0 140px 0;
+        margin: 0 0 100px 0;
     }
 
     &__skill-container {
         display: flex;
         flex-wrap: wrap;
-        row-gap: 80px;
-        column-gap: 100px;
+        row-gap: 65px;
+        column-gap: 70px;
         justify-content: space-between;
-        width: 847px;
+        width: 750px;
         margin: 0 auto;
 
         font-size: 1.2rem;
@@ -25,7 +25,7 @@
             height: 160px;
         }
 
-        i{
+        i {
             font-size: 5.4rem;
         }
 
@@ -42,6 +42,123 @@
             width: 85%;
             row-gap: 60px;
             column-gap: unset;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .skills {
+        &__skill-container {
+            width: 599px;
+            font-size: 1rem;
+
+            li {
+                width: 120px;
+                height: 140px;
+            }
+
+            i {
+                font-size: 4.8rem;
+            }
+
+            svg {
+                width: 120px;
+                height: 96px;
+            }
+        }
+    }
+}
+
+@media (max-width: 735px) {
+    .skills {
+
+        &__skill-container {
+            width: 535px;
+
+            li {
+                width: 107.5px;
+                height: 120px;
+            }
+
+            i {
+                font-size: 4.3rem;
+            }
+
+            svg {
+                width: 107.5px;
+                height: 86px;
+            }
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .skills {
+
+        &__skill-container {
+            width: 358px;
+
+            li {
+                width: 135px;
+                height: 140px;
+            }
+
+            i {
+                font-size: 5.4rem;
+            }
+
+            svg {
+                width: 135px;
+                height: 108px;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .skills {
+        h3 {
+            margin-bottom: 80px;
+        }
+
+        &__skill-container {
+            width: 294px;
+
+            li {
+                width: 100px;
+                height: 115px;
+            }
+
+            i {
+                font-size: 4rem;
+            }
+
+            svg {
+                width: 100px;
+                height: 80px;
+            }
+        }
+    }
+}
+
+@media (max-width: 410px) {
+    .skills {
+        &__skill-container {
+            width: 245px;
+
+            li {
+                width: 87.5px;
+                height: 110px;
+            }
+
+            i {
+                font-size: 3.5rem;
+            }
+
+            svg {
+                width: 87.5px;
+                height: 70px;
+            }
         }
     }
 }

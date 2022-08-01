@@ -134,41 +134,14 @@ nav {
 }
 
 @media (max-width: 600px) {
+    // I found this method of linearly scaling font-size in this artlice by Pedro Rodriguez on css-tricks.com
+    // https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ 
+
     h1 {
-        font-size: 4rem; // 80px
+        font-size: clamp(2.7rem, 1.214rem + 9.286vw, 4rem);
     }
 
     h2 {
-        font-size: 1.2rem; // 24px
-    }
-}
-
-@media (max-width: 500px) {
-    h1 {
-        font-size: 3.2rem; // 64px
-    }
-
-    h2 {
-        font-size: 1rem;
-    }
-
-    h3 {
-        font-size: 3.8rem; // 76px
-    }
-}
-
-@media (max-width: 425px) {
-    h1 {
-        font-size: 2.9rem; // 58px
-    }
-}
-
-@media (max-width: 350px) {
-    h1 {
-        font-size: 2.7rem; // 80px
-    }
-
-    h2 {
-        font-size: .9rem; // 18px
+        font-size: clamp(.9rem, 0.557rem + 2.143vw , 1.2rem);
     }
 }

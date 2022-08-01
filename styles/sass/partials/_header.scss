@@ -185,7 +185,7 @@
 
     .header {
         &__main-content {
-            height: 250px;
+            height: 80vh;
             min-height: 250px;
         }
 
@@ -211,36 +211,6 @@
             padding: 0 2px;
             .material-icons {
                 font-size: 1.2rem;
-            }
-        }
-    }
-}
-
-@media (max-width: 430px) {
-
-    .header {
-        &__theme-slider {
-            height: 35px;
-            width: 90px;
-
-            input {
-                &::-moz-range-thumb {
-                    width: 25px;
-                    height: 25px;
-                }
-
-                &::-webkit-slider-thumb {
-                    width: 25px;
-                    height: 25px;
-                }
-            }
-        }
-
-        &__theme-icons {
-            width: 102%;
-            padding: 0 2px;
-            .material-icons {
-                font-size: 1.1rem;
             }
         }
     }

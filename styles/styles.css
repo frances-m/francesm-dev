@@ -909,7 +909,8 @@ nav {
   justify-self: flex-end;
   height: 400px;
   width: 400px;
-  background-image: url(../assets/images/headshot.png);
+  border-radius: 50%;
+  background-image: url(../assets/images/headshot.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }

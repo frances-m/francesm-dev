@@ -909,8 +909,9 @@ nav {
   justify-self: flex-end;
   height: 400px;
   width: 400px;
-  border-radius: 50%;
-  background-color: #F8C2C2;
+  background-image: url(../assets/images/headshot.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .about__bio {
   grid-row: 2/span 1;

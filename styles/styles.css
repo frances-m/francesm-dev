@@ -1069,8 +1069,8 @@ nav {
 }
 @media (max-width: 450px) {
   .about__img {
-    height: 250px;
-    width: 250px;
+    height: 80vw;
+    width: 80vw;
   }
   .about__info {
     margin-top: 30px;

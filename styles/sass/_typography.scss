@@ -86,13 +86,11 @@ h4, h5,
 
 // ELEMENT SPECIFIC
 h1 {
-    //font-size: 6.4rem; //128px
     font-size: 5rem;
     line-height: .9;
 }
 
 h2 {
-    //font-size: 1.8rem; // 36px
     font-size: 1.4rem;
 }
 
@@ -124,16 +122,6 @@ nav {
 
 .footer {
     font-size: 2rem; // 40px
-}
-
-@media (max-width: 830px) {
-    h1 {
-        //font-size: 4.8rem; // 96px
-    }
-
-    h2 {
-       // font-size: 1.4rem; // 28px
-    }
 }
 
 @media (max-width: 600px) {

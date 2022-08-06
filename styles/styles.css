@@ -829,7 +829,6 @@ nav {
   font-weight: 400;
 }
 .header__mobile-nav-links {
-  display: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -837,14 +836,14 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 30px;
-  height: 50vh;
+  height: 100vh;
   margin: 0 auto;
 }
 
@@ -1412,12 +1411,6 @@ nav {
   }
 }
 .form-submit {
-  min-height: 100vh;
-  background-color: var(--primary-neutral);
-  color: var(--secondary-neutral);
-  text-align: center;
-}
-.form-submit .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1428,10 +1421,28 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  min-height: 100vh;
+  background-color: var(--primary-neutral);
+  color: var(--secondary-neutral);
+  text-align: center;
+}
+.form-submit .wrapper {
+  position: relative;
+  top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 60vh;
+  min-height: 500px;
 }
 .form-submit__text-container {
   display: -webkit-box;
@@ -1444,16 +1455,23 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 500px;
+  width: 90%;
+  max-width: 415px;
 }
 .form-submit h1 {
-  margin-bottom: 35px;
+  margin-bottom: 20px;
+  font-size: 5rem;
+}
+.form-submit p,
+.form-submit .button {
+  font-size: 0.9rem;
 }
 .form-submit p {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   font-weight: 500;
 }
 .form-submit .button {
+  margin-bottom: 20px;
   background-color: var(--secondary-neutral);
   color: var(--primary-neutral);
 }
@@ -1461,4 +1479,39 @@ nav {
   background-color: transparent;
   color: var(--secondary-neutral);
   border: 4px solid var(--secondary-neutral);
+}
+.form-submit .symbol {
+  font-size: 5.8rem;
+  margin: 0;
+}
+
+@media (max-width: 428px) and (max-height: 700px) {
+  .form-submit {
+    padding-top: 20px;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .form-submit h1 {
+    font-size: 4rem;
+  }
+  .form-submit p,
+.form-submit .button {
+    font-size: 0.8rem;
+  }
+  .form-submit .button {
+    width: 155px;
+    height: 50px;
+  }
+  .form-submit .symbol {
+    font-size: 4.5rem;
+  }
+}
+@media (max-height: 700px) {
+  .form-submit .wrapper {
+    position: static;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: 100vh;
+  }
 }

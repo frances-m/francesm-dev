@@ -18,13 +18,12 @@
     font-weight: 400;
 
     &-links {
-        display: none;
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: center;
         align-items: center;
         gap: 30px;
-        height: 50vh;
+        height: 100vh;
         margin: 0 auto;
     }
 }

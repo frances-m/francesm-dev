@@ -56,15 +56,46 @@
     }
 }
 
+.side-nav--desktop.show {
+    opacity: 1;
+    right: 2.5%;
+}
+
+.side-nav--mobile.slide {
+    right: 83vw;
+
+    span {
+        transform: rotate(180deg);
+    }
+}
+
 @media (max-width: 1020px) {
     .side-nav {
         bottom: 40px;
 
         &--desktop {
-            display: none;
+            right: -100vw;
+
+            flex-direction: row;
+            align-items: center;
+            width: 145px;
+            height: 40px;
+            padding: 0;
+            margin-right: 20px;
+
+            background-color: transparent;
+
+            opacity: 0;
+            transition: right 1s, opacity 2s;
         }
         &--mobile {
             display: flex;
+
+            transition: 1s;
+
+            span {
+                transition: 1s;
+            }
         }
     }
 }

@@ -1,10 +1,9 @@
 .header__mobile-nav {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 100vw;
     z-index: 5;
 
-    display: none;
     min-height: 100vh;
     width: 100vw;
     overflow: visible;
@@ -17,7 +16,12 @@
     text-transform: lowercase;
     font-weight: 400;
 
+    opacity: 0;
+    transition: 1s;
+
     &-links {
+        position: relative;
+        bottom: 6vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -26,4 +30,10 @@
         height: 100vh;
         margin: 0 auto;
     }
+}
+
+.header__mobile-nav.open {
+    left: 0 !important;
+
+    opacity: 1;
 }

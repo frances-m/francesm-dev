@@ -5,6 +5,7 @@
   --secondary-neutral--alt: white;
   --bg: #EEE7FD;
   --text-accent: #474747;
+  --link: #8E25FF;
   --footer: #141414;
 }
 
@@ -15,6 +16,7 @@
   --secondary-neutral--alt: white;
   --bg: #EEE7FD;
   --text-accent: #474747;
+  --link: #8E25FF;
   --footer: #E2E2E2;
 }
 
@@ -25,6 +27,7 @@
   --secondary-neutral--alt: black;
   --bg: #201F28;
   --text-accent: #E3C8FF;
+  -link: #C48DFF;
   --footer: #141414;
 }
 
@@ -1225,16 +1228,16 @@ nav {
   line-height: 120%;
 }
 .projects__project--1 .projects__built-with {
-  width: 360px;
+  width: 280px;
 }
 .projects__project--2 .projects__built-with {
-  width: 360px;
+  width: 388px;
 }
 .projects__project--3 .projects__built-with {
-  width: 360px;
+  width: 396px;
 }
 .projects__project--4 .projects__built-with {
-  width: 360px;
+  width: 295px;
 }
 .projects__img-container {
   -ms-flex-preferred-size: 448px;
@@ -1253,6 +1256,10 @@ nav {
   padding: 8px 12px;
   color: var(--secondary-neutral--alt);
   background-color: var(--primary-neutral--alt);
+}
+.projects__description a {
+  color: var(--link);
+  font-weight: 500;
 }
 .projects__btn-container {
   display: -webkit-box;
@@ -1339,11 +1346,14 @@ nav {
   .projects h3 {
     margin-bottom: 80px;
   }
+  .projects h5 {
+    font-size: 1.3rem;
+  }
   .projects__project {
     margin-bottom: 60px;
   }
-  .projects__project--1 .projects__built-with, .projects__project--2 .projects__built-with, .projects__project--3 .projects__built-with, .projects__project--4 .projects__built-with {
-    width: 100%;
+  .projects__project .projects__built-with {
+    width: 100% !important;
   }
   .projects__text-container {
     margin-bottom: 25px;
@@ -1353,7 +1363,6 @@ nav {
   }
   .projects__built-with {
     margin-bottom: 20px;
-    font-size: 0.9rem;
   }
   .projects__btn-container .button {
     width: 50%;
@@ -1368,7 +1377,7 @@ nav {
 }
 .contact p {
   text-align: center;
-  margin: 0 0 85px 0;
+  margin: 0 0 50px 0;
 }
 .contact__form {
   display: -webkit-box;
@@ -1393,6 +1402,14 @@ nav {
 @media (max-width: 950px) {
   .contact .wrapper {
     width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .contact h3 {
+    margin: 0 0 60px 0;
+  }
+  .contact p {
+    margin: 0 0 25px 0;
   }
 }
 @media (max-width: 600px) {

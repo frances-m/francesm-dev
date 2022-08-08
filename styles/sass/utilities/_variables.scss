@@ -10,6 +10,7 @@ $accent: #C48DFF;
     --secondary-neutral--alt: white;
     --bg: #EEE7FD;
     --text-accent: #474747;
+    --link: #8E25FF;
     --footer: #141414;
 }
 
@@ -21,6 +22,7 @@ $accent: #C48DFF;
     --secondary-neutral--alt: white;
     --bg: #EEE7FD;
     --text-accent: #474747;
+    --link: #8E25FF;
     --footer: #E2E2E2;
 }
 
@@ -32,6 +34,7 @@ $accent: #C48DFF;
     --secondary-neutral--alt: black;
     --bg: #201F28;
     --text-accent: #E3C8FF;
+    -link: #C48DFF;
     --footer: #141414;
 }
 
@@ -42,6 +45,7 @@ $secondary-neutral--alt: var(--secondary-neutral--alt);
 
 $bg: var(--bg);
 $text-accent: var(--text-accent);
+$link: var(--link);
 $footer: var(--footer);
 
 

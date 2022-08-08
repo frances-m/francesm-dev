@@ -20,19 +20,19 @@
 
         // Setting individual widths for each project's built with text
         &--1 .projects__built-with {
-            width: 360px;
+            width: 280px;
         }
     
         &--2 .projects__built-with {
-            width: 360px;
+            width: 388px;
         }
     
         &--3 .projects__built-with {
-            width: 360px;
+            width: 396px;
         }
     
         &--4 .projects__built-with {
-            width: 360px;
+            width: 295px;
         }
     }
 
@@ -55,6 +55,13 @@
 
             color: $secondary-neutral--alt;
             background-color: $primary-neutral--alt;
+    }
+
+    &__description {
+        a {
+            color: $link;
+            font-weight: 500;
+        }
     }
 
     &__btn-container {
@@ -150,15 +157,16 @@
             margin-bottom: 80px;
         }
 
+        h5 {
+            font-size: 1.3rem;
+        }
+
         &__project {
 
             margin-bottom: 60px;
 
-            &--1 .projects__built-with,
-            &--2 .projects__built-with,
-            &--3 .projects__built-with,
-            &--4 .projects__built-with {
-                width: 100%;
+            & .projects__built-with {
+                width: 100% !important;
             }
         }
 
@@ -172,8 +180,6 @@
 
         &__built-with {
             margin-bottom: 20px;
-
-            font-size: .9rem;
         }
 
         &__btn-container {

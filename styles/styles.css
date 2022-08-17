@@ -1,4 +1,6 @@
 .theme--main {
+  --header-bg: #E4D1FF;
+  --header-text: black;
   --primary-neutral: black;
   --secondary-neutral: white;
   --primary-neutral--alt: black;
@@ -10,6 +12,8 @@
 }
 
 .theme--light {
+  --header-bg: white;
+  --header-text: black;
   --primary-neutral: white;
   --secondary-neutral: black;
   --primary-neutral--alt: black;
@@ -21,6 +25,8 @@
 }
 
 .theme--dark {
+  --header-bg: black;
+  --header-text: white;
   --primary-neutral: black;
   --secondary-neutral: white;
   --primary-neutral--alt: white;
@@ -36,7 +42,7 @@
   height: 28px;
   border: none;
   border-radius: 50%;
-  background: var(--secondary-neutral);
+  background: var(--header-text);
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
@@ -588,6 +594,9 @@ nav {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.header h1, .header h2, .header a {
+  color: var(--header-text);
+}
 .header .wrapper {
   position: relative;
   height: 100%;
@@ -597,6 +606,7 @@ nav {
 .header__main-content {
   height: 60vh;
   min-height: 350px;
+  background-color: var(--header-bg);
 }
 .header__top {
   display: -webkit-box;
@@ -631,14 +641,14 @@ nav {
   z-index: -1;
   height: 40px;
   width: 120%;
-  background-color: var(--secondary-neutral);
+  background-color: var(--header-text);
   opacity: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .header__nav a:hover, .header__nav a:focus {
   outline: none;
-  color: var(--primary-neutral);
+  color: var(--secondary-neutral--alt);
 }
 .header__nav a:hover::after, .header__nav a:focus::after {
   opacity: 1;
@@ -699,7 +709,7 @@ nav {
   height: 28px;
   border: none;
   border-radius: 50%;
-  background: var(--secondary-neutral);
+  background: var(--header-text);
   -webkit-appearance: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -722,7 +732,7 @@ nav {
   height: 100%;
   padding: 0 2px;
   border-radius: 25px;
-  border: 2.5px solid var(--secondary-neutral);
+  border: 2.5px solid var(--header-text);
   border-spacing: 2px;
   z-index: 0;
 }
@@ -733,6 +743,9 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.header__icon-container .material-icons {
+  color: var(--header-text);
 }
 
 @media (max-width: 1020px) {

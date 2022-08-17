@@ -3,6 +3,10 @@
     display: flex;
     flex-direction: column;
 
+    h1, h2, a {
+        color: $header-text;
+    }
+
     .wrapper {
         position: relative;
         height: 100%;
@@ -13,6 +17,8 @@
     &__main-content {
         height: 60vh;
         min-height: 350px;
+
+        background-color: $header-bg;
     }
 
     &__top {
@@ -43,7 +49,7 @@
                 height: 40px;
                 width: 120%;
                 
-                background-color: $secondary-neutral;
+                background-color: $header-text;
 
                 opacity: 0;
                 transition: .5s;
@@ -52,7 +58,7 @@
             &:hover,
             &:focus {
                 outline: none;
-                color: $primary-neutral;
+                color: $secondary-neutral--alt;
             }
 
             &:hover::after,
@@ -87,8 +93,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        // width: 120px;
-        // height: 46px;
         height: 40px;
         width: 100px;
 
@@ -132,7 +136,7 @@
                 height: 28px;
                 border: none;
                 border-radius: 50%;
-                background: $secondary-neutral; 
+                background: $header-text; 
                 
                 -webkit-appearance: none;
                 transition: .3s;
@@ -155,7 +159,7 @@
         height: 100%;
         padding: 0 2px;
         border-radius: 25px;
-        border: 2.5px solid $secondary-neutral;
+        border: 2.5px solid $header-text;
         border-spacing: 2px;
 
         z-index: 0;
@@ -165,6 +169,9 @@
         display: flex;
         align-items: center;
         
+        .material-icons {
+            color: $header-text;
+        }
     }
 }
 

@@ -4,6 +4,8 @@ $accent: #C48DFF;
 
 // main theme
 .theme--main {
+    --header-bg: #E4D1FF;
+    --header-text: black;
     --primary-neutral: black;
     --secondary-neutral: white;
     --primary-neutral--alt: black;
@@ -16,6 +18,8 @@ $accent: #C48DFF;
 
 // light theme
 .theme--light {
+    --header-bg: white;
+    --header-text: black;
     --primary-neutral: white;
     --secondary-neutral: black;
     --primary-neutral--alt: black;
@@ -28,6 +32,8 @@ $accent: #C48DFF;
 
 // dark theme
 .theme--dark {
+    --header-bg: black;
+    --header-text: white;
     --primary-neutral: black;
     --secondary-neutral: white;
     --primary-neutral--alt: white;
@@ -37,6 +43,9 @@ $accent: #C48DFF;
     -link: #C48DFF;
     --footer: #141414;
 }
+
+$header-bg: var(--header-bg);
+$header-text: var(--header-text);
 
 $primary-neutral: var(--primary-neutral);
 $secondary-neutral: var(--secondary-neutral);

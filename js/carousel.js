@@ -39,16 +39,20 @@ carousel.projects = [
     }
 ];
 
+carousel.index = 0;
+
 carousel.populateCarousel = () => {
     const carouselContainerEl = document.querySelector(".projects__carousel");
 
     carousel.projects.forEach((project) => {
         const projectListEl = document.createElement("li");
         projectListEl.classList.add("projects__project");
+        // <img src=${project.imgSrc} alt=${project.alt} /> 
 
         projectListEl.innerHTML = `
-            <div class="projects__img-container">
-                <img src=${project.imgSrc} alt=${project.alt} />
+            <div class="projects__img-container" style="background-image: url(${project.imgSrc});">
+                
+
             </div> <!-- END project__img-container -->
             <div class="projects__text-container">
                 <h5>${project.title}</h5>

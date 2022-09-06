@@ -39,44 +39,63 @@ carousel.projects = [
     }
 ];
 
-carousel.index = 0;
+carousel.buttonEls = document.querySelectorAll(".projects__carousel-btn");
+carousel.carouselEl = document.querySelector(".projects__carousel");
+
+carousel.position = 0;
 
 carousel.populateCarousel = () => {
-    const carouselContainerEl = document.querySelector(".projects__carousel");
 
     carousel.projects.forEach((project) => {
         const projectListEl = document.createElement("li");
-        projectListEl.classList.add("projects__project");
-        // <img src=${project.imgSrc} alt=${project.alt} /> 
+        projectListEl.classList.add("projects__project-container");
 
         projectListEl.innerHTML = `
-            <div class="projects__img-container" style="background-image: url(${project.imgSrc});">
-                
-
-            </div> <!-- END project__img-container -->
-            <div class="projects__text-container">
-                <h5>${project.title}</h5>
-                <p class="projects__built-with">
-                    [${project.skillsUsed}]
-                </p>
-                <p class="projects__description">
-                    ${project.description}
-                </p>
-                <div class="projects__btn-container">
-                    <a href=${project.liveUrl} class="button" target="_blank">View Live</a>
-                    <a href=${project.repoUrl} class="button" target="_blank">View Repo</a>
-                </div> <!-- END projects__btn-container -->
-            </div> <!-- END projects__text-container -->
+            <div class="projects__project">
+                <div class="projects__img-container" style="background-image: url(${project.imgSrc});">
+                    
+                </div> <!-- END project__img-container -->
+                <div class="projects__text-container">
+                    <h5>${project.title}</h5>
+                    <p class="projects__built-with">
+                        [${project.skillsUsed}]
+                    </p>
+                    <p class="projects__description">
+                        ${project.description}
+                    </p>
+                    <div class="projects__btn-container">
+                        <a href=${project.liveUrl} class="button" target="_blank">View Live</a>
+                        <a href=${project.repoUrl} class="button" target="_blank">View Repo</a>
+                    </div> <!-- END projects__btn-container -->
+                </div> <!-- END projects__text-container -->
+            </div>
         `;
 
-        carouselContainerEl.append(projectListEl);
+        carousel.carouselEl.append(projectListEl);
     });
 }
 
 
 
+// carousel.changeDisplayedProject = (e) => {
+//     const carouselWidth = carousel.carouselEl.offsetWidth;
+//     switch(e.target.value) {
+//         case 'left':
+//             carousel.position += carouselWidth;
+//     } 
+// }
+
+// carousel.handleButtonClick = () => {
+//     carousel.buttonEls.forEach(button => {
+//         button.addEventListener('click', carousel.changeDisplayedProject);
+//     })
+// }
+
+
 carousel.init = () => {
-    carousel.populateCarousel();
+    // carousel.populateCarousel();
+    // carousel.handleButtonClick();
+    $(".owl-carousel").owlCarousel();
 }
 
 export default carousel;

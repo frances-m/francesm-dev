@@ -9,7 +9,6 @@
     overflow: visible;
 
     background-color: $primary-neutral;
-    color: $secondary-neutral;
 
     font-size: 2rem;
     font-family: $display-font;
@@ -22,6 +21,7 @@
     &-links {
         position: relative;
         bottom: 6vh;
+
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -29,6 +29,10 @@
         gap: 30px;
         height: 100vh;
         margin: 0 auto;
+
+        & a {
+            color: $secondary-neutral;
+        }
     }
 }
 

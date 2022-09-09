@@ -71,23 +71,16 @@ ul {
 }
 
 .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 215px;
-    height: 60px;
-
-    background-color: $primary-neutral--alt;
-    color: $secondary-neutral--alt;
-
-    transition: background-color .3s linear, color .3s linear;
-
+    padding: 3px 5px;
+    background-color: transparent;
+    color: white;
+    transition: .5s;
+    
     &:hover,
     &:focus {
+        color: black;
+        background-color: white;
         outline: none;
-        border: 4px solid $primary-neutral--alt;
-        background-color: transparent;
-        color: $primary-neutral--alt;
     }
 }
 
@@ -126,7 +119,7 @@ form {
     label {
         margin-bottom: 15px;
     }
-
+    
     button[type="submit"] {
         background-color: transparent;
         color: $secondary-neutral;
@@ -142,8 +135,29 @@ form {
     }
 }
 
+.form-submit__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    height: 50px;
+    border: 4px solid $secondary-neutral;
+    background-color: $secondary-neutral;
+    color: $primary-neutral;
+    font-size: .9rem;
+    font-weight: 600;
+    text-transform: lowercase;
+    transition: .5s;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: $secondary-neutral;
+    }
+}
+
 @media (max-width: 620px) {
     .section {
-        padding: 60px 0 150px 0;
+        padding: 40px 0 150px 0;
     }
 }

@@ -71,6 +71,8 @@ carousel.createCarousel = () => {
         nav: true,
         navPosition: 'bottom',
         //navAsThumbnails: true,
+        swipeAngle: 30,
+        preventScrollOnTouch: "force",
         autoWidth: true,
         responsive: {
             
@@ -86,16 +88,17 @@ carousel.populateCarousel = () => {
         const projectPreview = project.mobilePreview;
         const projectListEl = document.createElement("li");
         projectListEl.classList.add("projects__project");
+        // projectListEl.setAttribute("id", project.id);
 
         projectListEl.innerHTML = `
             <div class="projects__img-container">
                 <img src=${projectPreview} alt=${project.alt} />
             </div> <!-- END project__img-container -->
             <div class="projects__text-bg projects__${project.id}">
-                <div class="projects__text-container">
-                    <button class="projects__open-text" value=${project.id}>
+                <div class="projects__text-container" style="top: 235px">
+                    <div class="projects__project-header" value=${project.id}>
                         <span></span>
-                    </button>
+                    </div>
                     <h5>${project.title}</h5>
                     <p class="projects__tech">
                         [${project.skillsUsed}]
@@ -127,18 +130,89 @@ carousel.setView = () => {
     console.log(carousel.isMobileView);
 }
 
-carousel.openProjectDetails = ({currentTarget}) => {
-    const target = currentTarget.value;
-    const targetEl = document.querySelectorAll(`.projects__${target}`);
-    targetEl.forEach((target) => {
-        target.classList.add('active');
-    });
-    console.log(document.querySelector(`.projects__${target}`));
+carousel.openProjectDetails = (elmnt) => {
+    let pos1 = 0, pos2 = 0;
+    let elmntTop = 0;
+    const bgEl = elmnt.parentNode;
+
+    const midBgStyles = `
+        background: rgba( 255, 255, 255, 0.1 );
+        backdrop-filter: blur( 1px );
+        -webkit-backdrop-filter: blur( 1px );
+    `
+
+    const endBgStyles = `
+        background: rgba( 255, 255, 255, 0.2 );
+        backdrop-filter: blur( 2px );
+        -webkit-backdrop-filter: blur( 2px );
+    `
+
+    const closeDragElement = (e) => {
+        elmntTop = parseInt(elmnt.style.top);
+
+        if (elmntTop > 160) {
+            elmnt.style.top = `235px`;
+            bgEl.style.cssText = "";
+        } else {
+            elmnt.style.top = `0px`;
+            bgEl.style.cssText = endBgStyles;
+        }
+        window.onscroll = null;
+        document.removeEventListener("mouseup", closeDragElement);
+        document.removeEventListener("touchend", closeDragElement);
+        document.removeEventListener("mousemove", elementDrag);
+        document.removeEventListener("touchmove", elementDrag);
+    }
+
+    const elementDrag = (e) => {
+        e.preventDefault();
+        elmntTop = parseInt(elmnt.style.top);
+
+        pos1 = pos2 - (e.clientY || e.touches[0].clientY);
+        pos2 = e.clientY || e.touches[0].clientY;
+
+        if (elmntTop < 10) {
+            elmnt.style.top = `10px`;
+        } else if (elmntTop > 235) {
+            elmnt.style.top = `235px`;
+        } else {
+            elmnt.style.top = `${elmntTop - pos1}px`;
+        }
+
+        if (elmntTop > 160) {
+            bgEl.style.cssText = "";
+        } else if (elmntTop <= 160) {
+            bgEl.style.cssText = endBgStyles;
+        }
+    }
+
+    const dragMouseDown = (e) => {
+        e.preventDefault();
+        let vertScroll = window.pageYOffset || document.documentElement.scrollTop;
+        let horzScroll = window.pageXOffset || document.documentElement.scrollLeft;
+
+        window.onscroll = () => {
+            window.scrollTo(vertScroll, horzScroll);
+        }
+
+        pos2 = e.clientY || e.touches[0].clientY;
+
+        document.addEventListener("mouseup", closeDragElement);
+        document.addEventListener("touchend", closeDragElement);
+        document.addEventListener("mousemove", elementDrag);
+        document.addEventListener("touchmove", elementDrag, {passive: false});
+    }
+
+
+    elmnt.children[0].addEventListener("mousedown", dragMouseDown);
+    elmnt.children[0].addEventListener("touchstart", dragMouseDown);
+
 }
 
 carousel.createProjectButtons = () => {
-    document.querySelectorAll('.projects__open-text').forEach((button) => {
-        button.addEventListener('click', (e) => carousel.openProjectDetails(e));
+
+    document.querySelectorAll('.projects__text-container').forEach((textContainer) => {
+        carousel.openProjectDetails(textContainer);
     })
 }
 

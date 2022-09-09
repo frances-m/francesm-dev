@@ -54,37 +54,37 @@
         border-radius: 15px;
 
         // background: rgba( 255, 255, 255, 0.2 );
+        
         // backdrop-filter: blur( 2px );
         // -webkit-backdrop-filter: blur( 2px );
 
         font-size: .75rem;
         
-        transition: .8s;
+        transition: 2s;
         overflow: hidden;
     }
 
     &__text-container {
         position: relative;
-        bottom: -215px;
-        height: 290px;
+        //top: 215px;
+        height: 320px;
         width: 110%;
         min-width: 105%;
         //margin: 10px;
         margin-right: 0px;
-        padding: 20px 10px 10px 20px;
+        padding: 25px 20px 0px 20px;
         //border: 6px solid $accent;
-        border-radius: 30px;
+        border-radius: 30px 30px 0 0;
 
         background-color: black;
         color: white;
 
         line-height: 115%;
         
-        transition: .8s;
-        // pushing to netlify
+        transition: .1s;
     }
 
-    &__open-text {
+    &__project-header {
         position: absolute;
         left:0;
         top: 10px;
@@ -99,6 +99,7 @@
         background-color: transparent;
 
         transition: .5s;
+        cursor: grab;
 
         & span {
             width: 40px;
@@ -117,7 +118,7 @@
 
     &__btn-container {
         position: absolute;
-        bottom: 15px;
+        bottom: 25px;
     }
 
     .tns-nav {
@@ -136,18 +137,6 @@
 
         &-active {
             background-color: $accent !important;
-        }
-    }
-
-    &__text-bg.active {
-        background: rgba( 255, 255, 255, 0.2 );
-        backdrop-filter: blur( 2px );
-        -webkit-backdrop-filter: blur( 2px );
-
-        & .projects__text-container {
-            bottom: -10px;
-
-            //border-color: transparent;
         }
     }
 

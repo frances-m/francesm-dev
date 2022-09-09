@@ -1334,26 +1334,25 @@ nav {
   margin-right: 20px;
   border-radius: 15px;
   font-size: 0.75rem;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
+  -webkit-transition: 2s;
+  transition: 2s;
   overflow: hidden;
 }
 .projects__text-container {
   position: relative;
-  bottom: -215px;
-  height: 290px;
+  height: 320px;
   width: 110%;
   min-width: 105%;
   margin-right: 0px;
-  padding: 20px 10px 10px 20px;
-  border-radius: 30px;
+  padding: 25px 20px 0px 20px;
+  border-radius: 30px 30px 0 0;
   background-color: black;
   color: white;
   line-height: 115%;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
-.projects__open-text {
+.projects__project-header {
   position: absolute;
   left: 0;
   top: 10px;
@@ -1370,8 +1369,10 @@ nav {
   background-color: transparent;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
-.projects__open-text span {
+.projects__project-header span {
   width: 40px;
   height: 5px;
   border-radius: 5px;
@@ -1384,7 +1385,7 @@ nav {
 }
 .projects__btn-container {
   position: absolute;
-  bottom: 15px;
+  bottom: 25px;
 }
 .projects .tns-nav {
   display: -webkit-box;
@@ -1405,14 +1406,6 @@ nav {
 }
 .projects .tns-nav-active {
   background-color: #C48DFF !important;
-}
-.projects__text-bg.active {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-}
-.projects__text-bg.active .projects__text-container {
-  bottom: -10px;
 }
 
 .contact .wrapper {

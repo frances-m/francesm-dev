@@ -1465,7 +1465,7 @@ nav {
     margin-bottom: 80px;
   }
   .projects__project {
-    max-width: unset;
+    max-width: 860px !important;
   }
   .projects__text-container {
     padding: 20px 7.5%;
@@ -1483,7 +1483,7 @@ nav {
     top: 0;
     z-index: 1;
     display: block;
-    width: 100px;
+    width: 15%;
     height: 97%;
     background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(#000000));
     background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
@@ -1498,8 +1498,10 @@ nav {
     right: 0;
     border-radius: 0px 20px 20px 0px;
   }
-  .projects__project {
-    max-width: 860px !important;
+}
+@media (min-width: 1450px) {
+  .projects__carousel-btn {
+    width: 22.5%;
   }
 }
 .contact .wrapper {

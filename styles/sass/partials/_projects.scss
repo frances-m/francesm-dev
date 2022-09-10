@@ -57,6 +57,58 @@
         }
     }
 
+    &__details-btn {
+        position: absolute;
+        top: -30px;
+        left: calc(50% - 48px);
+        z-index: 3;
+
+        display: none;
+        width: 100px;
+        height: 30px;
+        margin: 0 auto;
+        // border: 4px solid $accent;
+        // border-bottom: none;
+        border-radius: 20px 20px 0 0;
+
+        background-color: black;
+        color: white;
+
+        font-size: .9rem;
+
+        transition: .5s;
+
+        span {
+            transition: .5s;
+        }
+
+        &--close {
+            display: none;
+            // position: absolute;
+            // top: 3px;
+            // left: 0;
+            // text-align: center;
+
+            // width: 100px;
+            // opacity: 0;
+        }
+
+        &.slide {
+            top: 0;
+            border-radius: 0 0 20px 20px;
+            border-bottom: unset;
+            border-top: none;
+
+            & .projects__details-btn--open {
+                display: none;
+            }
+
+            & .projects__details-btn--close {
+                display: block;
+            }
+        }
+    }
+
     &__text-bg {
         position: absolute;
         top: 0;
@@ -71,7 +123,7 @@
 
         font-size: .75rem;
         
-        transition: background 2s, backdrop-filter 2s, -webkit-backdrop-filter 2s;
+        transition: background 1s, backdrop-filter 1s, -webkit-backdrop-filter 1s, opacity 1s, top 1s;
         overflow: hidden;
     }
 
@@ -159,6 +211,7 @@
     .symbol {
         margin-top: 10px;
     }
+
 }
 
 
@@ -196,25 +249,6 @@
             margin-bottom: 80px;
         }
 
-        &__project {
-            max-width: 860px !important;
-        }
-
-        &__text-container {
-            padding: 20px 7.5%;
-        }
-        &__btn-container {
-            bottom: 145px;
-        }
-    }
-}
-
-@media (min-width: 1100px) {
-    .projects {
-        .wrapper {
-            width: 95%;
-        }
-
         &__carousel-btn {
             position: absolute;
             top: 0;
@@ -223,8 +257,8 @@
             display: block;
             width: 15%;
             height: 97%;
-    
-            background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+
+            background: transparent;
     
             &--left {
                 left: 0;
@@ -237,6 +271,83 @@
                 border-radius: 0px 20px 20px 0px;
             }
         }
+
+        &__project {
+            max-width: 860px !important;
+        }
+
+        &__project-header {
+            display: none;
+        }
+
+        &__details-btn {
+            display: block;
+        }
+    
+        &__text-bg {
+            max-width: 860px;
+            width: calc(100% - 20px);
+
+            background: rgba(0, 0, 0, 0.81);
+            //background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur( 2px );
+
+            overflow: visible;
+
+            // & * {
+            //     color:black;
+            // }
+
+            &.hide {
+                top: 100%;
+                
+                animation: fadeOut 1s linear;
+            }
+        }
+
+        &__text-container {
+            position: static;
+
+            width: 400px;
+            height: 100%;
+            padding: 20px 40% 0 7.5%;
+
+            background: transparent;   
+        }
+
+        &__tech {
+            margin-bottom: 30px;
+        }
+
+        &__btn-container {
+            bottom: 20px;
+        }
+
+    }
+}
+
+@media (min-width: 1100px) {
+    .projects {
+        .wrapper {
+            width: 95%;
+        }
+
+        h5 {
+            font-size: 1.6rem;
+        }
+
+        &__text-bg {
+            font-size: 1rem;
+        }
+
+        &__text-container {
+            padding: 20px 50% 0 7.5%;
+        }
+
+        &__carousel-btn {
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+        }
     }
 }
 
@@ -246,6 +357,12 @@
             width: 22.5%;
         }
     }
+}
+
+
+@keyframes fadeOut {
+    from {z-index: 1; opacity: 1;}
+    to {z-index: 1; opacity: 0;}
 }
 
 

@@ -75,7 +75,9 @@ carousel.createCarousel = () => {
         preventScrollOnTouch: "force",
         autoWidth: true,
         arrowKeys: true
-    })
+    });
+
+    carousel.setView();
 }
 
 carousel.populateCarousel = () => {
@@ -91,6 +93,10 @@ carousel.populateCarousel = () => {
                 <img src=${project.mobilePreview} alt=${project.alt} class="projects__preview--mobile projects__preview ${!carousel.isMobileView ? "hide" : ""}" />
             </div> <!-- END project__img-container -->
             <div class="projects__text-bg projects__${project.id}">
+                <button class="projects__details-btn">
+                    <span class="projects__details-btn--open">open</span>
+                    <span class="projects__details-btn--close">close</span>
+                </button>
                 <div class="projects__text-container" style="top: ${carousel.detailsDefaultPos}px">
                     <div class="projects__project-header" value=${project.id}>
                         <span></span>
@@ -122,6 +128,18 @@ carousel.setView = () => {
         carousel.isMobileView = true;
         carousel.displayPreview();
     }
+
+    if (carousel.isMobileView) {
+        document.querySelectorAll('.projects__details-btn').forEach((btn) => {
+            btn.parentNode.classList.remove('hide');
+            btn.classList.remove('slide');
+        });
+    } else {
+        document.querySelectorAll('.projects__text-bg').forEach((bgEl) => {
+            bgEl.classList.add('hide');
+            bgEl.style.cssText = "";
+        });
+    }
 }
 
 carousel.displayPreview = () => {
@@ -138,7 +156,7 @@ carousel.openProjectDetails = (elmnt) => {
     let pos1 = 0, pos2 = 0;
     let elmntTop = 0;
     const bgEl = elmnt.parentNode;
-    carousel.detailsEndPos = carousel.isMobileView ? 70 : 130;
+    // carousel.detailsEndPos = carousel.isMobileView ? 70 : 130;
 
     const midBgStyles = `
         background: rgba( 255, 255, 255, 0.1 );
@@ -152,7 +170,7 @@ carousel.openProjectDetails = (elmnt) => {
         -webkit-backdrop-filter: blur( 2px );
     `
 
-    const closeDragElement = (e) => {
+    const closeDragElement = (header) => {
         elmntTop = parseInt(elmnt.style.top);
 
         if (elmntTop > 160) {
@@ -162,11 +180,14 @@ carousel.openProjectDetails = (elmnt) => {
             elmnt.style.top = `${carousel.detailsEndPos}px`;
             bgEl.style.cssText = endBgStyles;
         }
+
         window.onscroll = null;
-        document.removeEventListener("mouseup", closeDragElement);
-        document.removeEventListener("touchend", closeDragElement);
-        document.removeEventListener("mousemove", elementDrag);
-        document.removeEventListener("touchmove", elementDrag);
+        document.onmouseup = null;
+        document.ontouchend = null;
+        document.onmousemove = null;
+        document.ontouchmove = null;
+
+        header.style.cursor = "grab";
     }
 
     const elementDrag = (e) => {
@@ -190,6 +211,7 @@ carousel.openProjectDetails = (elmnt) => {
             } else if (elmntTop <= 160) {
                 bgEl.style.cssText = endBgStyles;
             }
+            
         } catch(err){
             // occasionally, the attempt to reassign pos1 will throw an error, "e.touches[0].clientY is undefined" - this seems to only happen when the `top` property is less than 0, but not consistently
             // this doesn't seem to be an issue as it still sets pos1 to e.clientY like it usually would (if it's not doing it on that run, it does it the next time the user moves their mouse and the event listener continues to function properly)
@@ -198,6 +220,9 @@ carousel.openProjectDetails = (elmnt) => {
 
     const dragMouseDown = (e) => {
         e.preventDefault();
+        const header = e.currentTarget;
+        e.currentTarget.style.cursor = "grabbing";
+        
         let vertScroll = window.pageYOffset || document.documentElement.scrollTop;
         let horzScroll = window.pageXOffset || document.documentElement.scrollLeft;
 
@@ -207,10 +232,10 @@ carousel.openProjectDetails = (elmnt) => {
 
         pos2 = e.clientY || e.touches[0].clientY;
 
-        document.addEventListener("mouseup", closeDragElement);
-        document.addEventListener("touchend", closeDragElement);
-        document.addEventListener("mousemove", elementDrag);
-        document.addEventListener("touchmove", elementDrag, {passive: false});
+        document.onmouseup = () => closeDragElement(header);
+        document.ontouchend = () => closeDragElement(header);
+        document.onmousemove = elementDrag;
+        document.ontouchmove = elementDrag, {passive: false};
     }
 
 
@@ -223,11 +248,19 @@ carousel.createProjectButtons = () => {
     carousel.textContainerEls = document.querySelectorAll(".projects__text-container");
     carousel.textContainerEls.forEach((textContainer) => {
         carousel.openProjectDetails(textContainer);
-    })
+    });
+
+    document.querySelectorAll('.projects__details-btn').forEach((btn) => {
+        btn.onclick = () => {
+            btn.parentNode.classList.toggle('hide');
+            setTimeout(() => {
+                btn.classList.toggle('slide');
+            }, 1200);
+        }
+    });
 }
 
 carousel.init = () => {
-    carousel.setView();
     window.addEventListener('resize', carousel.setView);
     carousel.createCarousel();
     carousel.createProjectButtons();

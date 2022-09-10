@@ -1,4 +1,3 @@
-//import { tns } from "../node_modules/tiny-slider/src/tiny-slider.js";
 const carousel = {};
 
 carousel.projects = [
@@ -131,7 +130,6 @@ carousel.setView = () => {
 
 carousel.displayPreview = () => {
     const currentView = carousel.isMobileView ? "mobile" : "desktop";
-    //const detailsOffset = carousel.isMobileView ? `${carousel.detailsDefaultPos}px` : "0px";
 
     document.querySelectorAll('.projects__preview').forEach((preview) => {
         preview.classList.contains(`projects__preview--${currentView}`) ?

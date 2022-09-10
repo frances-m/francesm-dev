@@ -10,7 +10,7 @@ carousel.projects = [
         title: "Budgeting App",
         skillsUsed: "React, Firebase, CSS",
         description: "Created at <a href='https://junocollege.com/' target='_blank' rel='noopener noreferrer'>Juno College</a> - a budgeting app with persistent data that allows users to create an account and save their personal budget.",
-        liveUrl: "https://francesm-budget-app.netlify.app/",
+        liveUrl: "https://moneta-francesm.netlify.app/",
         repoUrl: "https://github.com/frances-m/budget-app"
     },
     {
@@ -51,8 +51,11 @@ carousel.projects = [
 carousel.rightButtonEl = document.querySelector(".projects__carousel-btn--right");
 carousel.leftButtonEl = document.querySelector(".projects__carousel-btn--left");
 carousel.carouselEl = document.querySelector(".projects__carousel");
+carousel.textContainerEls;
 
 carousel.isMobileView = false;
+carousel.detailsDefaultPos = 285;
+carousel.detailsEndPos = 70;
 
 carousel.createCarousel = () => {
     carousel.populateCarousel();
@@ -70,10 +73,10 @@ carousel.createCarousel = () => {
         nextButton: carousel.rightButtonEl,
         nav: true,
         navPosition: 'bottom',
-        //navAsThumbnails: true,
         swipeAngle: 30,
-        preventScrollOnTouch: "force",
+        preventScrollOnTouch: "auto",
         autoWidth: true,
+        arrowKeys: true,
         responsive: {
             
         }
@@ -84,18 +87,16 @@ carousel.populateCarousel = () => {
     carousel.carouselEl.innerHTML = '';
     
     carousel.projects.forEach((project) => {
-        //const projectPreview = carousel.isMobileView ? project.mobilePreview : project.desktopPreview;
-        const projectPreview = project.mobilePreview;
         const projectListEl = document.createElement("li");
         projectListEl.classList.add("projects__project");
-        // projectListEl.setAttribute("id", project.id);
 
         projectListEl.innerHTML = `
             <div class="projects__img-container">
-                <img src=${projectPreview} alt=${project.alt} />
+                <img src=${project.desktopPreview} alt=${project.alt} class="projects__preview--desktop projects__preview ${carousel.isMobileView ? "hide" : ""}" />
+                <img src=${project.mobilePreview} alt=${project.alt} class="projects__preview--mobile projects__preview ${!carousel.isMobileView ? "hide" : ""}" />
             </div> <!-- END project__img-container -->
             <div class="projects__text-bg projects__${project.id}">
-                <div class="projects__text-container" style="top: 235px">
+                <div class="projects__text-container" style="top: ${carousel.detailsDefaultPos}px">
                     <div class="projects__project-header" value=${project.id}>
                         <span></span>
                     </div>
@@ -119,21 +120,31 @@ carousel.populateCarousel = () => {
 }
 
 carousel.setView = () => {
-    console.log(window.innerWidth);
-    if (carousel.isMobileView && window.innerWidth > 700) {
+    if (carousel.isMobileView && window.innerWidth >= 700) {
         carousel.isMobileView = false;
-        carousel.populateCarousel();
+        carousel.displayPreview();
     } else if (!carousel.isMobileView && window.innerWidth < 700) {
         carousel.isMobileView = true;
-        carousel.populateCarousel();
+        carousel.displayPreview();
     }
-    console.log(carousel.isMobileView);
+}
+
+carousel.displayPreview = () => {
+    const currentView = carousel.isMobileView ? "mobile" : "desktop";
+    //const detailsOffset = carousel.isMobileView ? `${carousel.detailsDefaultPos}px` : "0px";
+
+    document.querySelectorAll('.projects__preview').forEach((preview) => {
+        preview.classList.contains(`projects__preview--${currentView}`) ?
+        preview.classList.remove('hide') : 
+        preview.classList.add('hide');
+    });
 }
 
 carousel.openProjectDetails = (elmnt) => {
     let pos1 = 0, pos2 = 0;
     let elmntTop = 0;
     const bgEl = elmnt.parentNode;
+    carousel.detailsEndPos = carousel.isMobileView ? 70 : 130;
 
     const midBgStyles = `
         background: rgba( 255, 255, 255, 0.1 );
@@ -151,10 +162,10 @@ carousel.openProjectDetails = (elmnt) => {
         elmntTop = parseInt(elmnt.style.top);
 
         if (elmntTop > 160) {
-            elmnt.style.top = `235px`;
+            elmnt.style.top = `${carousel.detailsDefaultPos}px`;
             bgEl.style.cssText = "";
         } else {
-            elmnt.style.top = `0px`;
+            elmnt.style.top = `${carousel.detailsEndPos}px`;
             bgEl.style.cssText = endBgStyles;
         }
         window.onscroll = null;
@@ -168,21 +179,26 @@ carousel.openProjectDetails = (elmnt) => {
         e.preventDefault();
         elmntTop = parseInt(elmnt.style.top);
 
-        pos1 = pos2 - (e.clientY || e.touches[0].clientY);
-        pos2 = e.clientY || e.touches[0].clientY;
-
-        if (elmntTop < 10) {
-            elmnt.style.top = `10px`;
-        } else if (elmntTop > 235) {
-            elmnt.style.top = `235px`;
-        } else {
-            elmnt.style.top = `${elmntTop - pos1}px`;
-        }
-
-        if (elmntTop > 160) {
-            bgEl.style.cssText = "";
-        } else if (elmntTop <= 160) {
-            bgEl.style.cssText = endBgStyles;
+        try {
+            pos1 = pos2 - (e.clientY || e.touches[0].clientY);
+            pos2 = e.clientY || e.touches[0].clientY;
+    
+            if (elmntTop < carousel.detailsEndPos) {
+                elmnt.style.top = `${carousel.detailsEndPos}px`;
+            } else if (elmntTop > carousel.detailsDefaultPos) {
+                elmnt.style.top = `${carousel.detailsDefaultPos}px`;
+            } else {
+                elmnt.style.top = `${elmntTop - pos1}px`;
+            }
+    
+            if (elmntTop > 160) {
+                bgEl.style.cssText = "";
+            } else if (elmntTop <= 160) {
+                bgEl.style.cssText = endBgStyles;
+            }
+        } catch(err){
+            // occasionally, the attempt to reassign pos1 will throw an error, "e.touches[0].clientY is undefined" - this seems to only happen when the `top` property is less than 0, but not consistently
+            // this doesn't seem to be an issue as it still sets pos1 to e.clientY like it usually would (if it's not doing it on that run, it does it the next time the user moves their mouse and the event listener continues to function properly)
         }
     }
 
@@ -210,15 +226,15 @@ carousel.openProjectDetails = (elmnt) => {
 }
 
 carousel.createProjectButtons = () => {
-
-    document.querySelectorAll('.projects__text-container').forEach((textContainer) => {
+    carousel.textContainerEls = document.querySelectorAll(".projects__text-container");
+    carousel.textContainerEls.forEach((textContainer) => {
         carousel.openProjectDetails(textContainer);
     })
 }
 
 carousel.init = () => {
-    // carousel.setView();
-    // window.addEventListener('resize', carousel.setView());
+    carousel.setView();
+    window.addEventListener('resize', carousel.setView);
     carousel.createCarousel();
     carousel.createProjectButtons();
 }

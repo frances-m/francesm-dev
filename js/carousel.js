@@ -65,7 +65,6 @@ carousel.createCarousel = () => {
         center: true,
         loop: true,
         speed: 400,
-        mouseDrag: true,
         gutter: 20,
         controls: true,
         prevButton: carousel.leftButtonEl,
@@ -73,12 +72,9 @@ carousel.createCarousel = () => {
         nav: true,
         navPosition: 'bottom',
         swipeAngle: 30,
-        preventScrollOnTouch: "auto",
+        preventScrollOnTouch: "force",
         autoWidth: true,
-        arrowKeys: true,
-        responsive: {
-            
-        }
+        arrowKeys: true
     })
 }
 

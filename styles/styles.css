@@ -1436,6 +1436,10 @@ nav {
   line-height: 115%;
   -webkit-transition: 0.1s;
   transition: 0.1s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .projects__project-header {
   position: absolute;

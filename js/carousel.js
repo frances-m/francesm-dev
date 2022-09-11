@@ -24,6 +24,17 @@ carousel.projects = [
         repoUrl: "https://github.com/frances-m/calculator-app"
     },
     {
+        id: "haiku",
+        desktopPreview: "./assets/images/projects/haiku.png",
+        mobilePreview: "./assets/images/projects/haiku-mobile.png",
+        alt: "screenshot of a haiku generator app",
+        title: "Haiku Highway",
+        skillsUsed: "React, REST API",
+        description: "A group project, made at <a href='https://junocollege.com/' target='_blank' rel='noopener noreferrer'>Juno College</a>. This app takes in a word of the user's choice and then provides options of words that the user may select from to create a complete haiku!",
+        liveUrl: "https://haiku-highway.netlify.app/",
+        repoUrl: "https://github.com/haiku-highway/haiku-highway"
+    },
+    {
         id: "simpsons",
         desktopPreview: "./assets/images/projects/simpsons-trivia.png",
         mobilePreview: "./assets/images/projects/simpsons-trivia-mobile.png",
@@ -71,10 +82,16 @@ carousel.createCarousel = () => {
         nextButton: carousel.rightButtonEl,
         nav: true,
         navPosition: "bottom",
-        swipeAngle: 30,
+        swipeAngle: 40,
         preventScrollOnTouch: "force",
         autoWidth: true,
-        arrowKeys: true
+        arrowKeys: true,
+        mouseDrag: true,
+        responsive: {
+            700: {
+                mouseDrag: false
+            }
+        }
     });
     
     const lowerTabIndex = (el) => {

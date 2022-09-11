@@ -139,6 +139,10 @@
         line-height: 115%;
         
         transition: .1s;
+        -webkit-user-select: none;       
+        -moz-user-select: none; 
+        -ms-user-select: none; 
+        user-select: none; 
     }
 
     &__project-header {

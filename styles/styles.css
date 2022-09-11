@@ -891,6 +891,12 @@ nav {
     -webkit-transition: 1s;
     transition: 1s;
   }
+  .side-nav--mobile:focus-visible {
+    background-color: var(--secondary-neutral);
+  }
+  .side-nav--mobile:focus-visible span {
+    color: var(--primary-neutral);
+  }
 }
 .header__mobile-nav {
   position: fixed;
@@ -925,12 +931,22 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 30px;
+  gap: 5px;
   height: 100vh;
   margin: 0 auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .header__mobile-nav-links a {
   color: var(--secondary-neutral);
+  padding: 5px 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.header__mobile-nav-links a:focus-visible {
+  outline: none;
+  background-color: var(--secondary-neutral);
+  color: var(--primary-neutral);
 }
 
 .header__mobile-nav.open {
@@ -938,6 +954,11 @@ nav {
   opacity: 1;
 }
 
+@media (min-width: 1020px) {
+  .header__mobile-nav {
+    display: none;
+  }
+}
 .footer {
   font-size: 1.2rem;
   color: var(--secondary-neutral);
@@ -1379,6 +1400,9 @@ nav {
 .projects__details-btn.slide .projects__details-btn--close {
   display: block;
 }
+.projects__details-btn:focus-visible {
+  outline: 5px solid #C48DFF;
+}
 .projects__text-bg {
   position: absolute;
   top: 0;
@@ -1474,6 +1498,14 @@ nav {
 }
 .projects .symbol {
   margin-top: 10px;
+}
+
+.no-js .projects__carousel {
+  overflow-x: auto;
+}
+
+.no-js .projects__carousel > div {
+  float: none;
 }
 
 @media (min-width: 340px) {

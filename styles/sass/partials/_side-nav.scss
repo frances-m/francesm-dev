@@ -96,6 +96,14 @@
             span {
                 transition: 1s;
             }
+
+            &:focus-visible {
+                background-color: $secondary-neutral;
+                
+                & span {
+                    color: $primary-neutral;
+                }
+            }
         }
     }
 }

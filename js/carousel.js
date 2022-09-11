@@ -60,7 +60,7 @@ carousel.createCarousel = () => {
     carousel.populateCarousel();
 
     const carouselOptions = tns({
-        container: '.projects__carousel',
+        container: ".projects__carousel",
         items: 1,
         center: true,
         loop: true,
@@ -70,18 +70,57 @@ carousel.createCarousel = () => {
         prevButton: carousel.leftButtonEl,
         nextButton: carousel.rightButtonEl,
         nav: true,
-        navPosition: 'bottom',
+        navPosition: "bottom",
         swipeAngle: 30,
         preventScrollOnTouch: "force",
         autoWidth: true,
         arrowKeys: true
     });
+    
+    const lowerTabIndex = (el) => {
+        el.setAttribute("tabindex", "-1");
+    }
+
+    const resetTabIndex = (el) => {
+        el.setAttribute("tabindex", "0");
+    }
+
+    const setTabIndexes = (carouselInfo) => {
+        let currentSlideIndex = carouselInfo.index;
+        const activeSlide = carouselInfo.slideItems[currentSlideIndex];
+        const allDetailsBtns = carouselInfo.container.querySelectorAll(".projects__details-btn");
+        const allProjectLinks = carouselInfo.container.querySelectorAll("a");
+        const detailsBtn = activeSlide.querySelector(".projects__details-btn");
+        const projectLinks = activeSlide.querySelectorAll("a"); 
+        
+        
+        allDetailsBtns.forEach((btn) => {
+            btn.classList.remove("slide");
+            btn.parentNode.classList.add("hide");
+            lowerTabIndex(btn)
+        });
+        allProjectLinks.forEach((a) => lowerTabIndex(a));
+
+        resetTabIndex(detailsBtn);
+
+        detailsBtn.addEventListener("click", (e) => {
+            if (e.currentTarget.classList.contains("slide")) {
+                projectLinks.forEach((a) => lowerTabIndex(a));
+            } else {
+                projectLinks.forEach((a) => resetTabIndex(a));
+            }
+        });
+    }
+
+    //document.querySelectorAll(".projects__carousel-btn").forEach((btn) => resetTabIndex(btn));
+    setTabIndexes(carouselOptions.getInfo());
+    carouselOptions.events.on("indexChanged", (e) => setTabIndexes(e));
 
     carousel.setView();
 }
 
 carousel.populateCarousel = () => {
-    carousel.carouselEl.innerHTML = '';
+    carousel.carouselEl.innerHTML = "";
     
     carousel.projects.forEach((project) => {
         const projectListEl = document.createElement("li");
@@ -93,7 +132,7 @@ carousel.populateCarousel = () => {
                 <img src=${project.mobilePreview} alt=${project.alt} class="projects__preview--mobile projects__preview ${!carousel.isMobileView ? "hide" : ""}" />
             </div> <!-- END project__img-container -->
             <div class="projects__text-bg projects__${project.id}">
-                <button class="projects__details-btn">
+                <button class="projects__details-btn" aria-label="toggle project details for ${project.title}">
                     <span class="projects__details-btn--open">open</span>
                     <span class="projects__details-btn--close">close</span>
                 </button>

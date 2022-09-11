@@ -48,6 +48,7 @@
 
     &__img-container {
         border-radius: inherit;
+
         & img {
             border-radius: inherit;
         }
@@ -67,8 +68,6 @@
         width: 100px;
         height: 30px;
         margin: 0 auto;
-        // border: 4px solid $accent;
-        // border-bottom: none;
         border-radius: 20px 20px 0 0;
 
         background-color: black;
@@ -84,13 +83,6 @@
 
         &--close {
             display: none;
-            // position: absolute;
-            // top: 3px;
-            // left: 0;
-            // text-align: center;
-
-            // width: 100px;
-            // opacity: 0;
         }
 
         &.slide {
@@ -106,6 +98,10 @@
             & .projects__details-btn--close {
                 display: block;
             }
+        }
+
+        &:focus-visible {
+            outline: 5px solid $accent;
         }
     }
 
@@ -214,6 +210,10 @@
 
 }
 
+// Carousel fallback
+.no-js .projects__carousel { overflow-x: auto; }
+.no-js .projects__carousel > div { float: none; }
+
 
 @media (min-width: 340px) {
     .projects {
@@ -289,15 +289,10 @@
             width: calc(100% - 20px);
 
             background: rgba(0, 0, 0, 0.81);
-            //background: rgba(255, 255, 255, 0.45);
             backdrop-filter: blur(25px);
             -webkit-backdrop-filter: blur( 2px );
 
             overflow: visible;
-
-            // & * {
-            //     color:black;
-            // }
 
             &.hide {
                 top: 100%;

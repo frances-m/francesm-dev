@@ -3,8 +3,8 @@ const carousel = {};
 carousel.projects = [
     {
         id: "moneta",
-        desktopPreview: "./assets/images/projects/moneta.png",
-        mobilePreview: "./assets/images/projects/moneta-mobile.png",
+        desktopPreview: "./assets/images/projects/moneta.webp",
+        mobilePreview: "./assets/images/projects/moneta-mobile.webp",
         alt: "screenshot of a budgeting app",
         title: "Budgeting App",
         skillsUsed: "React, Firebase, CSS",
@@ -14,8 +14,8 @@ carousel.projects = [
     },
     {
         id: "calc",
-        desktopPreview: "./assets/images/projects/calculator-app.png",
-        mobilePreview: "./assets/images/projects/calculator-app-mobile.png",
+        desktopPreview: "./assets/images/projects/calculator-app.webp",
+        mobilePreview: "./assets/images/projects/calculator-app-mobile.webp",
         alt: "screenshot of a calculator app",
         title: "Calculator App",
         skillsUsed: "jQuery, JavaScript, SCSS",
@@ -25,8 +25,8 @@ carousel.projects = [
     },
     {
         id: "haiku",
-        desktopPreview: "./assets/images/projects/haiku.png",
-        mobilePreview: "./assets/images/projects/haiku-mobile.png",
+        desktopPreview: "./assets/images/projects/haiku.webp",
+        mobilePreview: "./assets/images/projects/haiku-mobile.webp",
         alt: "screenshot of a haiku generator app",
         title: "Haiku Highway",
         skillsUsed: "React, REST API",
@@ -36,8 +36,8 @@ carousel.projects = [
     },
     {
         id: "simpsons",
-        desktopPreview: "./assets/images/projects/simpsons-trivia.png",
-        mobilePreview: "./assets/images/projects/simpsons-trivia-mobile.png",
+        desktopPreview: "./assets/images/projects/simpsons-trivia.webp",
+        mobilePreview: "./assets/images/projects/simpsons-trivia-mobile.webp",
         alt: "screenshot of a simpsons trivia app",
         title: "Simpsons Trivia",
         skillsUsed: "REST API, JavaScript",
@@ -47,8 +47,8 @@ carousel.projects = [
     },
     {
         id: "creative",
-        desktopPreview: "./assets/images/projects/creative-design.png",
-        mobilePreview: "./assets/images/projects/creative-design-mobile.png",
+        desktopPreview: "./assets/images/projects/creative-design.webp",
+        mobilePreview: "./assets/images/projects/creative-design-mobile.webp",
         alt: "screenshot of a design agency website",
         title: "Creative Design",
         skillsUsed: "JavaScript, SCSS, HTML",

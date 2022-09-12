@@ -26,7 +26,7 @@
         border-radius: 50%;
 
 
-        background-image: url(../assets/images/headshot.jpg);
+        background-image: url(../assets/images/headshot.webp);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -171,7 +171,7 @@
         &__grid {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(4, auto);
-            width: 80%;
+            width: 90%;
         }
         
         &__titles {
@@ -199,8 +199,8 @@
             grid-row: 1 / span 1;
 
             justify-self: center;
-            height: 300px;
-            width: 300px;
+            height: 350px;
+            width: 350px;
             margin-bottom: 65px;
         }
 

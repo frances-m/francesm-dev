@@ -680,7 +680,7 @@ nav {
 }
 .header__image {
   height: 100%;
-  background-image: url("../assets/images/header-bg.jpg");
+  background-image: url("../assets/images/header-bg.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -999,7 +999,7 @@ nav {
   height: 400px;
   width: 400px;
   border-radius: 50%;
-  background-image: url(../assets/images/headshot.jpg);
+  background-image: url(../assets/images/headshot.webp);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1121,7 +1121,7 @@ nav {
   .about__grid {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
-    width: 80%;
+    width: 90%;
   }
   .about__titles {
     grid-column: 1/span 1;
@@ -1142,8 +1142,8 @@ nav {
     grid-column: 1/span 1;
     grid-row: 1/span 1;
     justify-self: center;
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 350px;
     margin-bottom: 65px;
   }
   .about__info-container {

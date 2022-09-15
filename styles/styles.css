@@ -1110,6 +1110,9 @@ nav {
     width: 250px;
     margin-bottom: 60px;
   }
+  .about__info-container {
+    margin-bottom: 80px;
+  }
 }
 @media (max-width: 700px) {
   .about h3 {
@@ -1136,7 +1139,6 @@ nav {
   .about__bio {
     grid-column: 1/span 1;
     grid-row: 3/span 1;
-    font-size: 0.9rem;
   }
   .about__img {
     grid-column: 1/span 1;
@@ -1163,6 +1165,9 @@ nav {
   .about__img {
     height: 75vw;
     width: 75vw;
+  }
+  .about__bio {
+    font-size: 0.9rem;
   }
   .about__info {
     margin-top: 30px;
